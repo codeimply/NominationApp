@@ -25,6 +25,10 @@
 		1BA8D9E42AE29ACD008FBB3F /* CubeFoundationSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1BA8D9E32AE29ACD008FBB3F /* CubeFoundationSwiftUI */; };
 		1BA8D9E62AE29AF7008FBB3F /* FontName+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8D9E52AE29AF7008FBB3F /* FontName+Names.swift */; };
 		1BA8D9E82AE29B3B008FBB3F /* TextStyle+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8D9E72AE29B3B008FBB3F /* TextStyle+Styles.swift */; };
+		258A2CAF2AF2B1310067AAFC /* ActionButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CAE2AF2B1310067AAFC /* ActionButtonProtocol.swift */; };
+		258A2CB12AF2B1520067AAFC /* ActionButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB02AF2B1520067AAFC /* ActionButtonViewModel.swift */; };
+		258A2CB32AF2B19F0067AAFC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB22AF2B19F0067AAFC /* CustomButton.swift */; };
+		258A2CB52AF2B1C00067AAFC /* CustomBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB42AF2B1C00067AAFC /* CustomBorderButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		1BA8D9DD2AE2962B008FBB3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1BA8D9E52AE29AF7008FBB3F /* FontName+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FontName+Names.swift"; sourceTree = "<group>"; };
 		1BA8D9E72AE29B3B008FBB3F /* TextStyle+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextStyle+Styles.swift"; sourceTree = "<group>"; };
+		258A2CAE2AF2B1310067AAFC /* ActionButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonProtocol.swift; sourceTree = "<group>"; };
+		258A2CB02AF2B1520067AAFC /* ActionButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonViewModel.swift; sourceTree = "<group>"; };
+		258A2CB22AF2B19F0067AAFC /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		258A2CB42AF2B1C00067AAFC /* CustomBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBorderButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +72,9 @@
 		1B8FA0842AE2B69E009E185D /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				1B8FA0822AE2B69A009E185D /* HeaderBarView.swift */,
-				1B8FA0852AE2BB92009E185D /* NominationsHeaderView.swift */,
+				258A2CA92AF2B0690067AAFC /* Protocols */,
+				258A2CA22AF2B0480067AAFC /* ViewModels */,
+				258A2CA12AF2B03B0067AAFC /* Views */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -147,6 +156,33 @@
 				1BA8D9CE2AE29617008FBB3F /* Fonts */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		258A2CA12AF2B03B0067AAFC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1B8FA0822AE2B69A009E185D /* HeaderBarView.swift */,
+				1B8FA0852AE2BB92009E185D /* NominationsHeaderView.swift */,
+				258A2CB22AF2B19F0067AAFC /* CustomButton.swift */,
+				258A2CB42AF2B1C00067AAFC /* CustomBorderButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		258A2CA22AF2B0480067AAFC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				258A2CB02AF2B1520067AAFC /* ActionButtonViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		258A2CA92AF2B0690067AAFC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				258A2CAE2AF2B1310067AAFC /* ActionButtonProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +270,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				258A2CB52AF2B1C00067AAFC /* CustomBorderButton.swift in Sources */,
+				258A2CB12AF2B1520067AAFC /* ActionButtonViewModel.swift in Sources */,
 				1BA8D9BB2AE290D7008FBB3F /* ContentView.swift in Sources */,
+				258A2CAF2AF2B1310067AAFC /* ActionButtonProtocol.swift in Sources */,
 				1B8FA0862AE2BB92009E185D /* NominationsHeaderView.swift in Sources */,
+				258A2CB32AF2B19F0067AAFC /* CustomButton.swift in Sources */,
 				1B8FA0832AE2B69A009E185D /* HeaderBarView.swift in Sources */,
 				1BA8D9B92AE290D7008FBB3F /* NominationsApp.swift in Sources */,
 				1BA8D9E82AE29B3B008FBB3F /* TextStyle+Styles.swift in Sources */,
@@ -381,8 +421,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -411,8 +453,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

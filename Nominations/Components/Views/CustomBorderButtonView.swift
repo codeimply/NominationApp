@@ -9,7 +9,7 @@
 import SwiftUI
 
 /// Basic custom button with border for reuse on multiple screens.
-struct CustomBorderButton: View {
+struct CustomBorderButtonView: View {
     
     // Use of protocol with common properties
     @ObservedObject var viewModel: ActionButtonViewModel

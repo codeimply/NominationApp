@@ -9,7 +9,7 @@
 import SwiftUI
 
 /// Basic custom button for reuse on multiple screens.
-struct CustomButton: View {
+struct CustomButtonView: View {
     
     // Use of protocol with common properties
     @ObservedObject var viewModel: ActionButtonViewModel

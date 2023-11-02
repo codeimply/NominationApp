@@ -23,12 +23,13 @@ struct ContentView: View {
         .overlay (
             ZStack {
                 /* created a component for custom button to reuse in other screens reducing the amount of code */
-                CustomButton(viewModel: nominationButtonViewModel, backgroundColor: .black, foregroundColor: .white, frameWidth: 340, frameHeight: 50)
+                CustomButtonView(viewModel: nominationButtonViewModel, backgroundColor: .black, foregroundColor: .white, frameWidth: 340, frameHeight: 50)
             }
                 .frame(maxWidth: .infinity)
                 .padding(21)
                 .background(.white)
                 .offset(y: 360)
+                .shadow(.strong)
         )
     }
 }

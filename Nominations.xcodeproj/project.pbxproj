@@ -27,8 +27,12 @@
 		1BA8D9E82AE29B3B008FBB3F /* TextStyle+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8D9E72AE29B3B008FBB3F /* TextStyle+Styles.swift */; };
 		258A2CAF2AF2B1310067AAFC /* ActionButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CAE2AF2B1310067AAFC /* ActionButtonProtocol.swift */; };
 		258A2CB12AF2B1520067AAFC /* ActionButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB02AF2B1520067AAFC /* ActionButtonViewModel.swift */; };
-		258A2CB32AF2B19F0067AAFC /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB22AF2B19F0067AAFC /* CustomButton.swift */; };
-		258A2CB52AF2B1C00067AAFC /* CustomBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB42AF2B1C00067AAFC /* CustomBorderButton.swift */; };
+		258A2CB32AF2B19F0067AAFC /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB22AF2B19F0067AAFC /* CustomButtonView.swift */; };
+		258A2CB52AF2B1C00067AAFC /* CustomBorderButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB42AF2B1C00067AAFC /* CustomBorderButtonView.swift */; };
+		258A2CB72AF2BB860067AAFC /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB62AF2BB860067AAFC /* EmptyStateView.swift */; };
+		258A2CB92AF2E5560067AAFC /* NominationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB82AF2E5550067AAFC /* NominationFormView.swift */; };
+		258A2CBB2AF2EB570067AAFC /* NominationSubmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CBA2AF2EB570067AAFC /* NominationSubmittedView.swift */; };
+		258A2CBD2AF3193A0067AAFC /* Defaults+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CBC2AF3193A0067AAFC /* Defaults+Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,8 +56,12 @@
 		1BA8D9E72AE29B3B008FBB3F /* TextStyle+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextStyle+Styles.swift"; sourceTree = "<group>"; };
 		258A2CAE2AF2B1310067AAFC /* ActionButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonProtocol.swift; sourceTree = "<group>"; };
 		258A2CB02AF2B1520067AAFC /* ActionButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonViewModel.swift; sourceTree = "<group>"; };
-		258A2CB22AF2B19F0067AAFC /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		258A2CB42AF2B1C00067AAFC /* CustomBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBorderButton.swift; sourceTree = "<group>"; };
+		258A2CB22AF2B19F0067AAFC /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		258A2CB42AF2B1C00067AAFC /* CustomBorderButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBorderButtonView.swift; sourceTree = "<group>"; };
+		258A2CB62AF2BB860067AAFC /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		258A2CB82AF2E5550067AAFC /* NominationFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationFormView.swift; sourceTree = "<group>"; };
+		258A2CBA2AF2EB570067AAFC /* NominationSubmittedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationSubmittedView.swift; sourceTree = "<group>"; };
+		258A2CBC2AF3193A0067AAFC /* Defaults+Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Strings.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,8 @@
 				1BA8D9DD2AE2962B008FBB3F /* Info.plist */,
 				1BA8D9B82AE290D7008FBB3F /* NominationsApp.swift */,
 				1BA8D9BA2AE290D7008FBB3F /* ContentView.swift */,
+				258A2CB82AF2E5550067AAFC /* NominationFormView.swift */,
+				258A2CBA2AF2EB570067AAFC /* NominationSubmittedView.swift */,
 				1B8FA0842AE2B69E009E185D /* Components */,
 				1BA8D9DE2AE29652008FBB3F /* Resources */,
 				1BA8D9BE2AE290DA008FBB3F /* Preview Content */,
@@ -154,6 +164,7 @@
 				1BA8D9E52AE29AF7008FBB3F /* FontName+Names.swift */,
 				1BA8D9E72AE29B3B008FBB3F /* TextStyle+Styles.swift */,
 				1BA8D9CE2AE29617008FBB3F /* Fonts */,
+				258A2CBC2AF3193A0067AAFC /* Defaults+Strings.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -163,8 +174,9 @@
 			children = (
 				1B8FA0822AE2B69A009E185D /* HeaderBarView.swift */,
 				1B8FA0852AE2BB92009E185D /* NominationsHeaderView.swift */,
-				258A2CB22AF2B19F0067AAFC /* CustomButton.swift */,
-				258A2CB42AF2B1C00067AAFC /* CustomBorderButton.swift */,
+				258A2CB22AF2B19F0067AAFC /* CustomButtonView.swift */,
+				258A2CB42AF2B1C00067AAFC /* CustomBorderButtonView.swift */,
+				258A2CB62AF2BB860067AAFC /* EmptyStateView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -270,12 +282,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				258A2CB52AF2B1C00067AAFC /* CustomBorderButton.swift in Sources */,
+				258A2CB52AF2B1C00067AAFC /* CustomBorderButtonView.swift in Sources */,
 				258A2CB12AF2B1520067AAFC /* ActionButtonViewModel.swift in Sources */,
+				258A2CBB2AF2EB570067AAFC /* NominationSubmittedView.swift in Sources */,
 				1BA8D9BB2AE290D7008FBB3F /* ContentView.swift in Sources */,
+				258A2CB72AF2BB860067AAFC /* EmptyStateView.swift in Sources */,
 				258A2CAF2AF2B1310067AAFC /* ActionButtonProtocol.swift in Sources */,
+				258A2CB92AF2E5560067AAFC /* NominationFormView.swift in Sources */,
 				1B8FA0862AE2BB92009E185D /* NominationsHeaderView.swift in Sources */,
-				258A2CB32AF2B19F0067AAFC /* CustomButton.swift in Sources */,
+				258A2CBD2AF3193A0067AAFC /* Defaults+Strings.swift in Sources */,
+				258A2CB32AF2B19F0067AAFC /* CustomButtonView.swift in Sources */,
 				1B8FA0832AE2B69A009E185D /* HeaderBarView.swift in Sources */,
 				1BA8D9B92AE290D7008FBB3F /* NominationsApp.swift in Sources */,
 				1BA8D9E82AE29B3B008FBB3F /* TextStyle+Styles.swift in Sources */,
@@ -412,7 +428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Nominations/Preview Content\"";
 				DEVELOPMENT_TEAM = 25H7BM6YWK;
 				ENABLE_PREVIEWS = YES;
@@ -444,7 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Nominations/Preview Content\"";
 				DEVELOPMENT_TEAM = 25H7BM6YWK;
 				ENABLE_PREVIEWS = YES;

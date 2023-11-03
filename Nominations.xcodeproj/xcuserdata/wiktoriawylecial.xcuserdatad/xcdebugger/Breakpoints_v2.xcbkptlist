@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "FE872267-F4D2-45C0-9B02-62BFDE6A771A"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C4CCB27-8E40-4F1C-A075-7440B35D43E2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nominations/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "nominationButtonViewModel"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "6C4CCB27-8E40-4F1C-A075-7440B35D43E2 - 6ffbf930f8eb53f6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Nominations.ContentView.nominationButtonViewModel.getter : Nominations.ActionButtonViewModel"
+                  moduleName = "Nominations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wiktoriawylecial/Documents/projects/ios-developer-test-cube-academy/Nominations/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "41">
+               </Location>
+               <Location
+                  uuid = "6C4CCB27-8E40-4F1C-A075-7440B35D43E2 - 6ffbf930f8eb50cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Nominations.ContentView.nominationButtonViewModel.getter : Nominations.ActionButtonViewModel"
+                  moduleName = "Nominations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wiktoriawylecial/Documents/projects/ios-developer-test-cube-academy/Nominations/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "41">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "471621A6-627F-4BE7-AC3E-097070020B99"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nominations/Components/Logic/NominationFlowCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "continueToNextScreen()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "471621A6-627F-4BE7-AC3E-097070020B99 - a6eb959f28c36fd5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Nominations.NominationFlowCoordinator.continueToNextScreen() -&gt; ()"
+                  moduleName = "Nominations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wiktoriawylecial/Documents/projects/ios-developer-test-cube-academy/Nominations/Components/Logic/NominationFlowCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "471621A6-627F-4BE7-AC3E-097070020B99 - a6eb959f28c36ecd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Nominations.NominationFlowCoordinator.continueToNextScreen() -&gt; ()"
+                  moduleName = "Nominations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wiktoriawylecial/Documents/projects/ios-developer-test-cube-academy/Nominations/Components/Logic/NominationFlowCoordinator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "70">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE4DB029-6F16-4CF8-AC7C-54597DF8A725"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nominations/Components/Enums/NominationType.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "view(coordinator:action:screenActionHasOccurred:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BE4DB029-6F16-4CF8-AC7C-54597DF8A725 - ff160bb9a01d0d61"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Nominations.NominationType.view(coordinator: Nominations.NominationFlowCoordinator, action: () -&gt; (), screenActionHasOccurred: SwiftUI.Binding&lt;Swift.Bool&gt;) -&gt; some"
+                  moduleName = "Nominations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wiktoriawylecial/Documents/projects/ios-developer-test-cube-academy/Nominations/Components/Enums/NominationType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "432">
+               </Location>
+               <Location
+                  uuid = "BE4DB029-6F16-4CF8-AC7C-54597DF8A725 - ff160bb9a01d0d61"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Nominations.NominationType.view(coordinator: Nominations.NominationFlowCoordinator, action: () -&gt; (), screenActionHasOccurred: SwiftUI.Binding&lt;Swift.Bool&gt;) -&gt; some"
+                  moduleName = "Nominations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wiktoriawylecial/Documents/projects/ios-developer-test-cube-academy/Nominations/Components/Enums/NominationType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "605">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA279678-DEFC-4C8F-82A4-CC89378683E1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nominations/Components/Enums/NominationType.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "view(coordinator:action:screenActionHasOccurred:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EA279678-DEFC-4C8F-82A4-CC89378683E1 - ff160bb9a01d02ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Nominations.NominationType.view(coordinator: Nominations.NominationFlowCoordinator, action: () -&gt; (), screenActionHasOccurred: SwiftUI.Binding&lt;Swift.Bool&gt;) -&gt; some"
+                  moduleName = "Nominations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wiktoriawylecial/Documents/projects/ios-developer-test-cube-academy/Nominations/Components/Enums/NominationType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "3256">
+               </Location>
+               <Location
+                  uuid = "EA279678-DEFC-4C8F-82A4-CC89378683E1 - ff160bb9a01d02ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Nominations.NominationType.view(coordinator: Nominations.NominationFlowCoordinator, action: () -&gt; (), screenActionHasOccurred: SwiftUI.Binding&lt;Swift.Bool&gt;) -&gt; some"
+                  moduleName = "Nominations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wiktoriawylecial/Documents/projects/ios-developer-test-cube-academy/Nominations/Components/Enums/NominationType.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "1358">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

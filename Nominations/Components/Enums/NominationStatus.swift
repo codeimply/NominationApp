@@ -13,7 +13,6 @@ public enum NominationStatus: Int {
     
     case createNewNomination
     case back
-    case submitNomination
     case next
     case leavePage
     case allFieldsValid
@@ -29,8 +28,6 @@ public extension NominationStatus {
             return "CreateNewNomination"
         case .back:
             return "Back"
-        case .submitNomination:
-            return "SubmitNomination"
         case .next:
             return "Next"
         case .leavePage:

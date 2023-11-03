@@ -27,7 +27,6 @@
 		258A2CAF2AF2B1310067AAFC /* ActionButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CAE2AF2B1310067AAFC /* ActionButtonProtocol.swift */; };
 		258A2CB12AF2B1520067AAFC /* ActionButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB02AF2B1520067AAFC /* ActionButtonViewModel.swift */; };
 		258A2CB32AF2B19F0067AAFC /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB22AF2B19F0067AAFC /* CustomButtonView.swift */; };
-		258A2CB52AF2B1C00067AAFC /* CustomBorderButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB42AF2B1C00067AAFC /* CustomBorderButtonView.swift */; };
 		258A2CB72AF2BB860067AAFC /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB62AF2BB860067AAFC /* EmptyStateView.swift */; };
 		258A2CB92AF2E5560067AAFC /* NominationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB82AF2E5550067AAFC /* NominationFormView.swift */; };
 		258A2CBB2AF2EB570067AAFC /* NominationSubmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CBA2AF2EB570067AAFC /* NominationSubmittedView.swift */; };
@@ -43,6 +42,7 @@
 		258A2CE22AF53F0E0067AAFC /* NominationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CE12AF53F0E0067AAFC /* NominationViewModel.swift */; };
 		258A2CE52AF53F6D0067AAFC /* NominationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CE42AF53F6D0067AAFC /* NominationFlowCoordinator.swift */; };
 		258A2CE72AF555480067AAFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CE62AF555480067AAFC /* ContentView.swift */; };
+		258A2CE92AF5789A0067AAFC /* AreYouSureModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CE82AF5789A0067AAFC /* AreYouSureModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +66,6 @@
 		258A2CAE2AF2B1310067AAFC /* ActionButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonProtocol.swift; sourceTree = "<group>"; };
 		258A2CB02AF2B1520067AAFC /* ActionButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonViewModel.swift; sourceTree = "<group>"; };
 		258A2CB22AF2B19F0067AAFC /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
-		258A2CB42AF2B1C00067AAFC /* CustomBorderButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBorderButtonView.swift; sourceTree = "<group>"; };
 		258A2CB62AF2BB860067AAFC /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		258A2CB82AF2E5550067AAFC /* NominationFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationFormView.swift; sourceTree = "<group>"; };
 		258A2CBA2AF2EB570067AAFC /* NominationSubmittedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationSubmittedView.swift; sourceTree = "<group>"; };
@@ -82,6 +81,7 @@
 		258A2CE12AF53F0E0067AAFC /* NominationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationViewModel.swift; sourceTree = "<group>"; };
 		258A2CE42AF53F6D0067AAFC /* NominationFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationFlowCoordinator.swift; sourceTree = "<group>"; };
 		258A2CE62AF555480067AAFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		258A2CE82AF5789A0067AAFC /* AreYouSureModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreYouSureModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +133,7 @@
 				258A2CE62AF555480067AAFC /* ContentView.swift */,
 				258A2CB82AF2E5550067AAFC /* NominationFormView.swift */,
 				258A2CBA2AF2EB570067AAFC /* NominationSubmittedView.swift */,
+				258A2CE82AF5789A0067AAFC /* AreYouSureModal.swift */,
 				258A2CD82AF53C9F0067AAFC /* NominationFlow.swift */,
 				1B8FA0842AE2B69E009E185D /* Components */,
 				1BA8D9DE2AE29652008FBB3F /* Resources */,
@@ -199,7 +200,6 @@
 				1B8FA0822AE2B69A009E185D /* HeaderBarView.swift */,
 				1B8FA0852AE2BB92009E185D /* NominationsHeaderView.swift */,
 				258A2CB22AF2B19F0067AAFC /* CustomButtonView.swift */,
-				258A2CB42AF2B1C00067AAFC /* CustomBorderButtonView.swift */,
 				258A2CB62AF2BB860067AAFC /* EmptyStateView.swift */,
 				258A2CC02AF3E2600067AAFC /* PickerView.swift */,
 				258A2CC22AF3E4F20067AAFC /* RadioButtonView.swift */,
@@ -328,7 +328,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				258A2CB52AF2B1C00067AAFC /* CustomBorderButtonView.swift in Sources */,
 				258A2CE52AF53F6D0067AAFC /* NominationFlowCoordinator.swift in Sources */,
 				258A2CC62AF4014E0067AAFC /* RadioButtonViewModel.swift in Sources */,
 				258A2CB12AF2B1520067AAFC /* ActionButtonViewModel.swift in Sources */,
@@ -353,6 +352,7 @@
 				1BA8D9E82AE29B3B008FBB3F /* TextStyle+Styles.swift in Sources */,
 				1BA8D9E62AE29AF7008FBB3F /* FontName+Names.swift in Sources */,
 				1BA8D9CD2AE294B3008FBB3F /* FigmaShadow+Shadows.swift in Sources */,
+				258A2CE92AF5789A0067AAFC /* AreYouSureModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

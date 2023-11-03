@@ -37,7 +37,7 @@ struct HeaderBarView: View {
         .padding(.vertical, 8)
         .background(
             Color.black
-                .ignoresSafeArea()
+                .ignoresSafeArea(.all)
                 .shadow(.strong)
         )
     }

@@ -17,9 +17,9 @@ extension View {
     func customTabStyle() -> some View {
         self
             .frame(maxWidth: .infinity)
-            .frame(height: 140)
+            .frame(height: 120)
             .background(.white)
-            .offset(y: 360)
+            .offset(y: 350)
             .shadow(.strong)
     }
     

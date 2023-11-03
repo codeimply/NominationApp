@@ -14,6 +14,8 @@ public class NominationFlowCoordinator: ObservableObject {
     let userDefaults: UserDefaults
     let currentStageKey: String
     
+    @Published var submittedNomination = false
+    
     public static var shared = NominationFlowCoordinator() // creates one instance of the coordinator that can be shared
     
     var currentPage: NominationType {
@@ -45,17 +47,7 @@ public class NominationFlowCoordinator: ObservableObject {
             userDefaults.set(newValue, forKey: NominationStatus.createNewNomination.key)
         }
     }
-    
-    var submitNomination: Bool {
-        get {
-            userDefaults.bool(forKey: NominationStatus.submitNomination.key)
-        }
-        
-        set {
-            userDefaults.set(newValue, forKey: NominationStatus.submitNomination.key)
-        }
-    }
-    
+
     var next: Bool {
         get {
             userDefaults.bool(forKey: NominationStatus.next.key)
@@ -89,8 +81,22 @@ public class NominationFlowCoordinator: ObservableObject {
         case .createNomination:
             goToNominationSubmitted()
             
+            if next {
+                goToNominationSubmitted()
+            }
+            
+            if back {
+                goToHomePage()
+                back = false 
+            }
+            
         case .submitNomination:
             flowCompleted()
+            
+            if back {
+                goToHomePage()
+                back = false 
+            }
         }
     }
     
@@ -100,32 +106,14 @@ public class NominationFlowCoordinator: ObservableObject {
     
     func goToNominationForm() {
         currentPage = .createNomination
-        
-        if next {
-            goToNominationSubmitted()
-        }
-        
-        if back {
-            goToHomePage()
-        }
     }
     
     func goToNominationSubmitted() {
         currentPage = .submitNomination
-        
-        if createNomination {
-            goToNominationForm()
-        }
-        
-        if back {
-            goToHomePage()
-        }
     }
     
     func flowCompleted() {
-        if back {
-            goToHomePage()
-        }
+        currentPage = .home
         
         if createNomination {
             goToNominationForm()

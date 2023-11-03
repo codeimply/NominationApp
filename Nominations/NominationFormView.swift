@@ -6,11 +6,16 @@
 //  Copyright © 2023 3 Sided Cube (UK) Ltd. All rights reserved.
 //
 
+import Combine
 import SwiftUI
 
 struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
     
+    @Environment(\.scenePhase) var scenePhase
+    
     @ObservedObject var viewModel: ViewModel
+    @ObservedObject var nominationFlowCooridnator: NominationFlowCoordinator
+    
     @Binding var screenActionHasOccurred: Bool
     
     // MARK: - Strings
@@ -31,6 +36,14 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
     @State private var activeSelectedOption = false
     @State private var activeFieldText = false
     @State private var activeRadioButton = false
+    @State private var selectedOption = false
+    @State private var writtenReasoning = false
+    @State private var selectedFeedback = false
+    @State private var pressed = false
+    @State private var showSettings = false
+    @State private var settingsDetent = PresentationDetent.medium
+    
+    let characterLimit = 280
     
     // MARK: - Data
     let options = ["Select Option", "David Jones", "Lorem Ipsum"]
@@ -43,10 +56,16 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
         RadioButtonViewModel(image: "VeryFairHappyIcon", title: "Very Fair")
     ]
     
+    init(viewModel: ViewModel, screenActionHasOccurred: Binding<Bool>) {
+        self.viewModel = viewModel
+        self._screenActionHasOccurred = screenActionHasOccurred
+        nominationFlowCooridnator = NominationFlowCoordinator.shared
+    }
+    
     var body: some View {
         
         VStack(spacing: 0) {
-
+            
             /* Reused code implemented for the title */
             HeaderBarView(title: headerTitle)
             ScrollView {
@@ -73,6 +92,10 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
                         PickerView(activeSelectedOption: $activeSelectedOption, options: options)
                             .onTapGesture {
                                 activeSelectedOption = true
+                                
+                                if options.rawValue != "Select Option" {
+                                    selectedOption = true
+                                }
                             }
                     }
                     .padding(.top, 34)
@@ -91,14 +114,19 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
                     /* Reduced amount of code compared to concatenate and ensures customisation */
                     Text("\(Text("* ").foregroundColor(.cubePink2)) \(reasoningTitle)")
                         .font(Font.custom("Poppins-Bold", size: 16))
-                
+                    
                     TextEditor(text: $reasoning)
+                        .onReceive(Just(reasoning)) { _ in limitCharacters(characterLimit) }
                         .border(activeFieldText ? .cubeDarkGrey : .cubeMidGrey)
                         .frame(height: 207)
                         .customDescriptionStyle()
                         .onTapGesture {
                             // border when user clicks on the editor
                             activeFieldText = true
+                            
+                            if !reasoning.isEmpty {
+                                writtenReasoning = true
+                            }
                         }
                         .overlay(
                             /* provides placeholder - disappears when user starts typing */
@@ -106,7 +134,8 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
                                 reasoning.isEmpty ? Text(placeholder) : Text("")
                             }
                                 .customDescriptionStyle()
-                                .offset(x: 4, y: -86))
+                                .offset(x: 4, y: -86)
+                        )
                     
                     Divider()
                         .overlay(.cubeMidGrey)
@@ -124,6 +153,9 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
                      ForEach reduces the amount of code to create multiple buttons */
                     ForEach(radioButtonData) { data in
                         RadioButtonView(image: data.image, title: data.title)
+                    }
+                    .onTapGesture {
+                        selectedFeedback = true
                     }
                     
                     /* Pushes content up from behind custom tab bar */
@@ -144,15 +176,36 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
         .overlay (
             ZStack {
                 /* created a component for custom button to reuse in other screens reducing the amount of code */
+                
                 HStack {
-                    CustomBorderButtonView(viewModel: backButtonViewModel, foregroundColor: .black, frameWidth: 100, frameHeight: 48)
+                    
+                    CustomButtonView(viewModel: backButtonViewModel, backgroundColor: .white, foregroundColor: .black, borderColor: pressed ? .cubePink : .black, frameWidth: 100, frameHeight: 48)
                         .padding(.trailing, 14)
                     
-                    CustomButtonView(viewModel: submitNominationButtonViewModel, backgroundColor: .cubeMidGrey, foregroundColor: .cubeLightGrey, frameWidth: 200, frameHeight: 50)
+                    if !nominationFlowCooridnator.submittedNomination {
+                        CustomButtonView(viewModel: submitNominationButtonViewModel, backgroundColor: pressed ? .cubeDarkGrey : .cubeMidGrey, foregroundColor: .cubeLightGrey, borderColor: pressed ? .black : .cubeMidGrey, frameWidth: 200, frameHeight: 48)
+                    } else {
+                        CustomButtonView(viewModel: nextButtonViewModel, backgroundColor: pressed ? .cubeDarkGrey : .cubeMidGrey, foregroundColor: .cubeLightGrey, borderColor: pressed ? .black : .cubeMidGrey, frameWidth: 200, frameHeight: 48)
+                    }
                 }
             }
                 .customTabStyle() // custom modifiers
         )
+        .onDisappear {
+            NominationFlowCoordinator.shared.submittedNomination = false
+        }
+        .sheet(isPresented: $showSettings) {
+            AreYouSureModal(viewModel: viewModel, screenActionHasOccurred: $screenActionHasOccurred)
+                .presentationDetents([.medium, .large])
+                .presentationCornerRadius(0)
+                .presentationDragIndicator(.hidden)
+        }
+        .onChange(of: scenePhase) { newValue in
+            if newValue == .background {
+                NominationFlowCoordinator.shared.flowCompleted()
+                viewModel.buttonAction()
+            }
+        }
     }
 }
 
@@ -164,7 +217,8 @@ private extension NominationFormView {
         ActionButtonViewModel(title: submitButton,
                               active: .constant(true),
                               action: {
-            viewModel.buttonAction()
+            buttonState()
+            NominationFlowCoordinator.shared.submittedNomination = true
         })
     }
     
@@ -173,8 +227,14 @@ private extension NominationFormView {
         ActionButtonViewModel(title: backButton,
                               active: .constant(true),
                               action: {
-            NominationFlowCoordinator.shared.back = true
-            viewModel.buttonAction()
+            if selectedOption || writtenReasoning || selectedFeedback {
+                showSettings = true
+                buttonState()
+            } else {
+                buttonState()
+                NominationFlowCoordinator.shared.back = true
+                viewModel.buttonAction()
+            }
         })
     }
     
@@ -183,9 +243,30 @@ private extension NominationFormView {
         ActionButtonViewModel(title: nextButton,
                               active: .constant(true),
                               action: {
+            buttonState()
             NominationFlowCoordinator.shared.next = true
             viewModel.buttonAction()
         })
     }
 }
 
+/* func to limit the characters in FieldEditor */
+private extension NominationFormView {
+    
+    func limitCharacters(_ upper: Int) {
+        if reasoning.count > upper {
+            reasoning = String(reasoning.prefix(upper))
+        }
+    }
+}
+
+/* button state - if pressed change colour and return to default */
+private extension NominationFormView {
+    
+    func buttonState() {
+        pressed = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            pressed = false
+        }
+    }
+}

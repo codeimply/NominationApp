@@ -15,7 +15,7 @@ struct PickerView: View {
     
     @Binding var activeSelectedOption: Bool
     @State var options: [String]
-    @State private var selectedOption = "One"
+    @State private var selectedOption = "Select Option"
     
     var body: some View {
         

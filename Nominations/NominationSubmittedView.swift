@@ -10,6 +10,8 @@ import SwiftUI
 
 struct NominationSubmittedView<ViewModel: NominationViewModelProtocol>: View {
     
+    @Environment(\.scenePhase) var scenePhase
+    
     @ObservedObject var viewModel: ViewModel
     @Binding var screenActionHasOccurred: Bool
     
@@ -19,6 +21,8 @@ struct NominationSubmittedView<ViewModel: NominationViewModelProtocol>: View {
     var submittedDescription = Content.Description.nominationSubmittedDescription
     var createNominationsButton = Content.ButtonLabel.createNewNominations
     var backButton = Content.ButtonLabel.backToHome
+    
+    @State private var pressed = false
     
     var body: some View {
         
@@ -54,14 +58,20 @@ struct NominationSubmittedView<ViewModel: NominationViewModelProtocol>: View {
             ZStack {
                 /* created a component for custom button to reuse in other screens reducing the amount of code */
                 VStack {
-                    CustomButtonView(viewModel: createNewNominationButtonViewModel, backgroundColor: .black, foregroundColor: .white, frameWidth: 340, frameHeight: 50)
+                    CustomButtonView(viewModel: createNewNominationButtonViewModel, backgroundColor: pressed ? .cubeDarkGrey : .black, foregroundColor: .white, borderColor: .black, frameWidth: 340, frameHeight: 48)
                         .padding(.bottom, 6)
                     
-                    CustomBorderButtonView(viewModel: backToHomeButtonViewModel, foregroundColor: .black, frameWidth: 340, frameHeight: 48)
+                    CustomButtonView(viewModel: createNewNominationButtonViewModel, backgroundColor: .white, foregroundColor: .black, borderColor: pressed ? .cubePink : .black, frameWidth: 340, frameHeight: 48)
                 }
             }
                 .customLargeTabStyle() // custom modifiers
         )
+        .onChange(of: scenePhase) { newValue in
+            if newValue == .background {
+                NominationFlowCoordinator.shared.flowCompleted()
+                viewModel.buttonAction()
+            }
+        }
     }
 }
 
@@ -73,6 +83,7 @@ private extension NominationSubmittedView {
         ActionButtonViewModel(title: createNominationsButton,
                               active: .constant(true),
                               action: {
+            buttonState()
             NominationFlowCoordinator.shared.createNomination = true
             viewModel.buttonAction()
         })
@@ -83,8 +94,20 @@ private extension NominationSubmittedView {
         ActionButtonViewModel(title: backButton,
                               active: .constant(true),
                               action: {
+            buttonState()
             NominationFlowCoordinator.shared.back = true
             viewModel.buttonAction()
         })
+    }
+}
+
+/* button state - if pressed change colour and return to default */
+private extension NominationSubmittedView {
+    
+    func buttonState() {
+        pressed = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            pressed = false
+        }
     }
 }

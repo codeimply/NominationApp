@@ -42,6 +42,7 @@ struct NominationFlow: View {
             }
             .tabViewStyle(.page)
         }
+        .ignoresSafeArea(.all, edges: [.bottom, .top])
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
             if screenActionHasOccurred {
                 showNextPage()

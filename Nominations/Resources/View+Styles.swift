@@ -23,7 +23,6 @@ extension View {
             .shadow(.strong)
     }
     
-    
     func customLargeTabStyle() -> some View {
         self
             .frame(maxWidth: .infinity)

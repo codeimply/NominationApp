@@ -24,7 +24,6 @@ struct PickerView: View {
             .frame(height: 35)
             .overlay (
                 ZStack {
-                    
                     HStack {
                         Text("\(selectedOption)")
                             .font(Font.custom("Anonymous Pro", size: 16))

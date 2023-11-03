@@ -9,6 +9,9 @@
 import Foundation
 import SwiftUI
 
+/// Collection of custom data types for radio button data
+///
+/// Uses identifiable protocol to ensure each object in collection is unique 
 struct RadioButtonViewModel: Identifiable {
     
     let id = UUID()

@@ -10,29 +10,33 @@ import SwiftUI
 
 struct NominationSubmittedView: View {
     
-//    @ObservedObject var viewModel: ViewModel
+    // MARK: - Strings
+    var submittedHeader = Content.Title.nominationSubmittedTitle
+    var submittedTitle = Content.Title.nominationSubmittedTitle
+    var submittedDescription = Content.Description.nominationSubmittedDescription
+    var createNominationsButton = Content.ButtonLabel.createNewNominations
+    var backButton = Content.ButtonLabel.backToHome
     
     var body: some View {
         
         VStack(spacing: 0) {
             /* Reused code implemented for the title */
-            HeaderBarView(title: Content.Title.nominationSubmittedTitle)
+            HeaderBarView(title: submittedHeader)
             
             ScrollView {
-                
                 Image("NominationSubmittedHeader")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .padding(.bottom, 24)
                 
                 VStack {
-                    Text(Content.Title.nominationSubmittedTitle)
+                    Text(submittedTitle)
                         .textCase(.uppercase)
                         .font(Font.custom("Poppins-Bold", size: 32))
                         .multilineTextAlignment(.center)
                         .padding(.bottom, 16)
                     
-                    Text(Content.Description.nominationSubmittedDescription)
+                    Text(submittedDescription)
                         .font(Font.custom("Anonymous Pro", size: 16))
                         .multilineTextAlignment(.center)
                         .frame(width: 350)
@@ -55,9 +59,7 @@ struct NominationSubmittedView: View {
                 }
             }
                 .customLargeTabStyle() // custom modifiers
-            
         )
-
     }
 }
 
@@ -65,12 +67,12 @@ struct NominationSubmittedView: View {
     NominationSubmittedView()
 }
 
+/* created protocol that holds blueprint of common properties for a button */
 private extension NominationSubmittedView {
     
     var createNewNominationButtonViewModel: ActionButtonViewModel {
         
-        /* created protocol that holds blueprint of common properties for a button */
-        ActionButtonViewModel(title: Content.ButtonLabel.createNewNominations,
+        ActionButtonViewModel(title: createNominationsButton,
                               active: .constant(true),
                               action: {
             
@@ -80,8 +82,7 @@ private extension NominationSubmittedView {
     
     var backToHomeButtonViewModel: ActionButtonViewModel {
         
-        /* created protocol that holds blueprint of common properties for a button */
-        ActionButtonViewModel(title: Content.ButtonLabel.backToHome,
+        ActionButtonViewModel(title: backButton,
                               active: .constant(true),
                               action: {
             

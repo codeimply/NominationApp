@@ -24,7 +24,6 @@ struct Content {
         static let cubesNameTitle = "Cube's name"
         static let nomineeReasoningTitle = "I’d like to nominate this cube because..."
         static let reasoningTitle = "Reasoning"
-        
     }
     
     struct Description {
@@ -34,7 +33,6 @@ struct Content {
         static let nomineeNameDescription = "Please select a cube who you feel has done something honourable this month or just all round has a great work ethic."
         static let nomineeReasoningDescription = "Please let us know why you think this cube deserves the ‘cube of the month’ title 🏆⭐"
         static let feedbackDescription = "As you know, out the nominees chosen, we spin a wheel to pick the cube of the month. What’s your opinion on this method?"
-        
     }
     
     struct ButtonLabel {

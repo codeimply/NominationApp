@@ -8,6 +8,9 @@
 
 import SwiftUI
 
+/// Custom Radio Button View.
+///
+/// Options can be customised as needed.
 struct RadioButtonView: View {
     
     @State var activeRadioButton = false
@@ -17,7 +20,6 @@ struct RadioButtonView: View {
     var body: some View {
         
         VStack {
-            
             Rectangle()
                 .stroke(activeRadioButton ? .cubeDarkGrey : .cubeMidGrey, lineWidth: 1)
                 .frame(height: 50)

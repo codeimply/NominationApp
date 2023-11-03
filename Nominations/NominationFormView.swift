@@ -22,13 +22,15 @@ struct NominationFormView: View {
     var submitButton = Content.ButtonLabel.submit
     var backButton = Content.ButtonLabel.back
     
-    @State private var reasoning: String = ""
+    @State private var reasoning = ""
+    @State private var placeholder = "I'd like to nominate this cube because.."
     @State private var activeSelectedOption = false
     @State private var activeFieldText = false
     @State private var activeRadioButton = false
-    
     @State var nominationSubmitted = false
+    @State var backToHome = false
     
+    // MARK: - Data
     let options = ["Select Option", "David Jones", "Lorem Ipsum"]
     
     let radioButtonData = [
@@ -43,12 +45,13 @@ struct NominationFormView: View {
         
         VStack(spacing: 0) {
             
+            /* navigation links to screens */
             nominationSubmittedNavigationLink
+            backToHomeNavigationLink
             
             /* Reused code implemented for the title */
             HeaderBarView(title: headerTitle)
             ScrollView {
-                
                 Image("NominationFormHeader")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -90,14 +93,22 @@ struct NominationFormView: View {
                     /* Reduced amount of code compared to concatenate and ensures customisation */
                     Text("\(Text("* ").foregroundColor(.cubePink2)) \(reasoningTitle)")
                         .font(Font.custom("Poppins-Bold", size: 16))
-                    
-                    TextField("Given Name",
-                              text: $reasoning)
-                    .border(activeFieldText ? .cubeDarkGrey : .cubeMidGrey)
-                    .customDescriptionStyle()
-                    .onTapGesture {
-                        activeFieldText = true
-                    }
+                
+                    TextEditor(text: $reasoning)
+                        .border(activeFieldText ? .cubeDarkGrey : .cubeMidGrey)
+                        .frame(height: 207)
+                        .customDescriptionStyle()
+                        .onTapGesture {
+                            // border when user clicks on the editor
+                            activeFieldText = true
+                        }
+                        .overlay(
+                            /* provides placeholder - disappears when user starts typing */
+                            VStack(alignment: .leading) {
+                                reasoning.isEmpty ? Text(placeholder) : Text("")
+                            }
+                                .customDescriptionStyle()
+                                .offset(x: 4, y: -86))
                     
                     Divider()
                         .overlay(.cubeMidGrey)
@@ -118,15 +129,21 @@ struct NominationFormView: View {
                     }
                     
                     /* Pushes content up from behind custom tab bar */
-                    Spacer(minLength: 90)
-                    
+                    Spacer(minLength: 120)
                 }
                 .padding([.leading, .trailing], 16)
-                
             }
+            .gesture(
+                /* deselectes inputs when user scrolls */
+                DragGesture()
+                    .onChanged { value in
+                        activeSelectedOption = false
+                        activeFieldText = false
+                    }
+            )
         }
         .background(.cubeLightGrey)
-        .navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(true) // hides back button
         .overlay (
             ZStack {
                 /* created a component for custom button to reuse in other screens reducing the amount of code */
@@ -146,11 +163,20 @@ struct NominationFormView: View {
     NominationFormView()
 }
 
+/* provides easier maintenance */
 extension NominationFormView {
     
     var nominationSubmittedNavigationLink: some View {
         NavigationLink(destination: NominationSubmittedView(),
                        isActive: $nominationSubmitted) {
+            EmptyView()
+        }
+                       .isDetailLink(false)
+    }
+    
+    var backToHomeNavigationLink: some View {
+        NavigationLink(destination: ContentView(),
+                       isActive: $backToHome) {
             EmptyView()
         }
                        .isDetailLink(false)
@@ -166,7 +192,6 @@ private extension NominationFormView {
                               active: .constant(true),
                               action: {
             nominationSubmitted = true
-            
         })
     }
     
@@ -175,8 +200,7 @@ private extension NominationFormView {
         ActionButtonViewModel(title: backButton,
                               active: .constant(true),
                               action: {
-            
-            
+            backToHome = true
         })
     }
 }

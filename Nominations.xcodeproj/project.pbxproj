@@ -11,7 +11,6 @@
 		1B8FA0832AE2B69A009E185D /* HeaderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FA0822AE2B69A009E185D /* HeaderBarView.swift */; };
 		1B8FA0862AE2BB92009E185D /* NominationsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FA0852AE2BB92009E185D /* NominationsHeaderView.swift */; };
 		1BA8D9B92AE290D7008FBB3F /* NominationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8D9B82AE290D7008FBB3F /* NominationsApp.swift */; };
-		1BA8D9BB2AE290D7008FBB3F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8D9BA2AE290D7008FBB3F /* ContentView.swift */; };
 		1BA8D9BD2AE290DA008FBB3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA8D9BC2AE290DA008FBB3F /* Assets.xcassets */; };
 		1BA8D9C02AE290DA008FBB3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA8D9BF2AE290DA008FBB3F /* Preview Assets.xcassets */; };
 		1BA8D9CD2AE294B3008FBB3F /* FigmaShadow+Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8D9CC2AE294B3008FBB3F /* FigmaShadow+Shadows.swift */; };
@@ -37,6 +36,13 @@
 		258A2CC12AF3E2600067AAFC /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CC02AF3E2600067AAFC /* PickerView.swift */; };
 		258A2CC32AF3E4F20067AAFC /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CC22AF3E4F20067AAFC /* RadioButtonView.swift */; };
 		258A2CC62AF4014E0067AAFC /* RadioButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CC52AF4014E0067AAFC /* RadioButtonViewModel.swift */; };
+		258A2CD92AF53C9F0067AAFC /* NominationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CD82AF53C9F0067AAFC /* NominationFlow.swift */; };
+		258A2CDD2AF53CF00067AAFC /* NominationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CDB2AF53CEF0067AAFC /* NominationStatus.swift */; };
+		258A2CDE2AF53CF00067AAFC /* NominationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CDC2AF53CEF0067AAFC /* NominationType.swift */; };
+		258A2CE02AF53F040067AAFC /* NominationViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CDF2AF53F040067AAFC /* NominationViewModelProtocol.swift */; };
+		258A2CE22AF53F0E0067AAFC /* NominationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CE12AF53F0E0067AAFC /* NominationViewModel.swift */; };
+		258A2CE52AF53F6D0067AAFC /* NominationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CE42AF53F6D0067AAFC /* NominationFlowCoordinator.swift */; };
+		258A2CE72AF555480067AAFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CE62AF555480067AAFC /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +51,6 @@
 		1B8FA0852AE2BB92009E185D /* NominationsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationsHeaderView.swift; sourceTree = "<group>"; };
 		1BA8D9B52AE290D7008FBB3F /* Nominations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nominations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA8D9B82AE290D7008FBB3F /* NominationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationsApp.swift; sourceTree = "<group>"; };
-		1BA8D9BA2AE290D7008FBB3F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1BA8D9BC2AE290DA008FBB3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BA8D9BF2AE290DA008FBB3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1BA8D9CC2AE294B3008FBB3F /* FigmaShadow+Shadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FigmaShadow+Shadows.swift"; sourceTree = "<group>"; };
@@ -70,6 +75,13 @@
 		258A2CC02AF3E2600067AAFC /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		258A2CC22AF3E4F20067AAFC /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
 		258A2CC52AF4014E0067AAFC /* RadioButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonViewModel.swift; sourceTree = "<group>"; };
+		258A2CD82AF53C9F0067AAFC /* NominationFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationFlow.swift; sourceTree = "<group>"; };
+		258A2CDB2AF53CEF0067AAFC /* NominationStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationStatus.swift; sourceTree = "<group>"; };
+		258A2CDC2AF53CEF0067AAFC /* NominationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationType.swift; sourceTree = "<group>"; };
+		258A2CDF2AF53F040067AAFC /* NominationViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationViewModelProtocol.swift; sourceTree = "<group>"; };
+		258A2CE12AF53F0E0067AAFC /* NominationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationViewModel.swift; sourceTree = "<group>"; };
+		258A2CE42AF53F6D0067AAFC /* NominationFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationFlowCoordinator.swift; sourceTree = "<group>"; };
+		258A2CE62AF555480067AAFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +100,8 @@
 		1B8FA0842AE2B69E009E185D /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				258A2CE32AF53F610067AAFC /* Logic */,
+				258A2CDA2AF53CB20067AAFC /* Enums */,
 				258A2CA92AF2B0690067AAFC /* Protocols */,
 				258A2CA22AF2B0480067AAFC /* ViewModels */,
 				258A2CA12AF2B03B0067AAFC /* Views */,
@@ -116,9 +130,10 @@
 			children = (
 				1BA8D9DD2AE2962B008FBB3F /* Info.plist */,
 				1BA8D9B82AE290D7008FBB3F /* NominationsApp.swift */,
-				1BA8D9BA2AE290D7008FBB3F /* ContentView.swift */,
+				258A2CE62AF555480067AAFC /* ContentView.swift */,
 				258A2CB82AF2E5550067AAFC /* NominationFormView.swift */,
 				258A2CBA2AF2EB570067AAFC /* NominationSubmittedView.swift */,
+				258A2CD82AF53C9F0067AAFC /* NominationFlow.swift */,
 				1B8FA0842AE2B69E009E185D /* Components */,
 				1BA8D9DE2AE29652008FBB3F /* Resources */,
 				1BA8D9BE2AE290DA008FBB3F /* Preview Content */,
@@ -195,6 +210,7 @@
 		258A2CA22AF2B0480067AAFC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				258A2CE12AF53F0E0067AAFC /* NominationViewModel.swift */,
 				258A2CC52AF4014E0067AAFC /* RadioButtonViewModel.swift */,
 				258A2CB02AF2B1520067AAFC /* ActionButtonViewModel.swift */,
 			);
@@ -204,9 +220,27 @@
 		258A2CA92AF2B0690067AAFC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				258A2CDF2AF53F040067AAFC /* NominationViewModelProtocol.swift */,
 				258A2CAE2AF2B1310067AAFC /* ActionButtonProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		258A2CDA2AF53CB20067AAFC /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				258A2CDB2AF53CEF0067AAFC /* NominationStatus.swift */,
+				258A2CDC2AF53CEF0067AAFC /* NominationType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		258A2CE32AF53F610067AAFC /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				258A2CE42AF53F6D0067AAFC /* NominationFlowCoordinator.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,15 +329,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				258A2CB52AF2B1C00067AAFC /* CustomBorderButtonView.swift in Sources */,
+				258A2CE52AF53F6D0067AAFC /* NominationFlowCoordinator.swift in Sources */,
 				258A2CC62AF4014E0067AAFC /* RadioButtonViewModel.swift in Sources */,
 				258A2CB12AF2B1520067AAFC /* ActionButtonViewModel.swift in Sources */,
 				258A2CBB2AF2EB570067AAFC /* NominationSubmittedView.swift in Sources */,
-				1BA8D9BB2AE290D7008FBB3F /* ContentView.swift in Sources */,
+				258A2CE22AF53F0E0067AAFC /* NominationViewModel.swift in Sources */,
 				258A2CB72AF2BB860067AAFC /* EmptyStateView.swift in Sources */,
+				258A2CE02AF53F040067AAFC /* NominationViewModelProtocol.swift in Sources */,
 				258A2CAF2AF2B1310067AAFC /* ActionButtonProtocol.swift in Sources */,
+				258A2CDE2AF53CF00067AAFC /* NominationType.swift in Sources */,
+				258A2CD92AF53C9F0067AAFC /* NominationFlow.swift in Sources */,
 				258A2CBF2AF3DB950067AAFC /* View+Styles.swift in Sources */,
 				258A2CB92AF2E5560067AAFC /* NominationFormView.swift in Sources */,
 				1B8FA0862AE2BB92009E185D /* NominationsHeaderView.swift in Sources */,
+				258A2CE72AF555480067AAFC /* ContentView.swift in Sources */,
+				258A2CDD2AF53CF00067AAFC /* NominationStatus.swift in Sources */,
 				258A2CC12AF3E2600067AAFC /* PickerView.swift in Sources */,
 				258A2CBD2AF3193A0067AAFC /* Defaults+Strings.swift in Sources */,
 				258A2CB32AF2B19F0067AAFC /* CustomButtonView.swift in Sources */,
@@ -444,7 +484,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Nominations/Preview Content\"";
 				DEVELOPMENT_TEAM = 25H7BM6YWK;
 				ENABLE_PREVIEWS = YES;
@@ -453,7 +493,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -476,7 +517,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"Nominations/Preview Content\"";
 				DEVELOPMENT_TEAM = 25H7BM6YWK;
 				ENABLE_PREVIEWS = YES;
@@ -485,7 +526,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;

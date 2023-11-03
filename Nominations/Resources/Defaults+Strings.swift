@@ -41,6 +41,7 @@ struct Content {
         static let backToHome = "Back to home"
         static let submit = "Submit nomination"
         static let back = "Back"
+        static let next = "Next"
     }
     
     

@@ -12,7 +12,7 @@ import SwiftUI
 struct NominationsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NominationFlow(pages: NominationType.fullNominationFlow)
         }
     }
 }

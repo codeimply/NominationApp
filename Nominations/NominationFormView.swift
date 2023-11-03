@@ -8,7 +8,10 @@
 
 import SwiftUI
 
-struct NominationFormView: View {
+struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
+    
+    @ObservedObject var viewModel: ViewModel
+    @Binding var screenActionHasOccurred: Bool
     
     // MARK: - Strings
     let headerTitle = Content.Title.createNominationTitle
@@ -21,14 +24,13 @@ struct NominationFormView: View {
     var feedbackDescription = Content.Description.feedbackDescription
     var submitButton = Content.ButtonLabel.submit
     var backButton = Content.ButtonLabel.back
+    var nextButton = Content.ButtonLabel.next
     
     @State private var reasoning = ""
     @State private var placeholder = "I'd like to nominate this cube because.."
     @State private var activeSelectedOption = false
     @State private var activeFieldText = false
     @State private var activeRadioButton = false
-    @State var nominationSubmitted = false
-    @State var backToHome = false
     
     // MARK: - Data
     let options = ["Select Option", "David Jones", "Lorem Ipsum"]
@@ -44,11 +46,7 @@ struct NominationFormView: View {
     var body: some View {
         
         VStack(spacing: 0) {
-            
-            /* navigation links to screens */
-            nominationSubmittedNavigationLink
-            backToHomeNavigationLink
-            
+
             /* Reused code implemented for the title */
             HeaderBarView(title: headerTitle)
             ScrollView {
@@ -143,7 +141,6 @@ struct NominationFormView: View {
             )
         }
         .background(.cubeLightGrey)
-        .navigationBarBackButtonHidden(true) // hides back button
         .overlay (
             ZStack {
                 /* created a component for custom button to reuse in other screens reducing the amount of code */
@@ -159,30 +156,6 @@ struct NominationFormView: View {
     }
 }
 
-#Preview {
-    NominationFormView()
-}
-
-/* provides easier maintenance */
-extension NominationFormView {
-    
-    var nominationSubmittedNavigationLink: some View {
-        NavigationLink(destination: NominationSubmittedView(),
-                       isActive: $nominationSubmitted) {
-            EmptyView()
-        }
-                       .isDetailLink(false)
-    }
-    
-    var backToHomeNavigationLink: some View {
-        NavigationLink(destination: ContentView(),
-                       isActive: $backToHome) {
-            EmptyView()
-        }
-                       .isDetailLink(false)
-    }
-}
-
 /* created protocol that holds blueprint of common properties for a button */
 private extension NominationFormView {
     
@@ -191,7 +164,7 @@ private extension NominationFormView {
         ActionButtonViewModel(title: submitButton,
                               active: .constant(true),
                               action: {
-            nominationSubmitted = true
+            viewModel.buttonAction()
         })
     }
     
@@ -200,7 +173,18 @@ private extension NominationFormView {
         ActionButtonViewModel(title: backButton,
                               active: .constant(true),
                               action: {
-            backToHome = true
+            NominationFlowCoordinator.shared.back = true
+            viewModel.buttonAction()
+        })
+    }
+    
+    var nextButtonViewModel: ActionButtonViewModel {
+        
+        ActionButtonViewModel(title: nextButton,
+                              active: .constant(true),
+                              action: {
+            NominationFlowCoordinator.shared.next = true
+            viewModel.buttonAction()
         })
     }
 }

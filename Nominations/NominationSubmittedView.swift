@@ -8,7 +8,10 @@
 
 import SwiftUI
 
-struct NominationSubmittedView: View {
+struct NominationSubmittedView<ViewModel: NominationViewModelProtocol>: View {
+    
+    @ObservedObject var viewModel: ViewModel
+    @Binding var screenActionHasOccurred: Bool
     
     // MARK: - Strings
     var submittedHeader = Content.Title.nominationSubmittedTitle
@@ -47,7 +50,6 @@ struct NominationSubmittedView: View {
             }
         }
         .background(.cubeLightGrey)
-        .navigationBarBackButtonHidden(true)
         .overlay (
             ZStack {
                 /* created a component for custom button to reuse in other screens reducing the amount of code */
@@ -63,10 +65,6 @@ struct NominationSubmittedView: View {
     }
 }
 
-#Preview {
-    NominationSubmittedView()
-}
-
 /* created protocol that holds blueprint of common properties for a button */
 private extension NominationSubmittedView {
     
@@ -75,8 +73,8 @@ private extension NominationSubmittedView {
         ActionButtonViewModel(title: createNominationsButton,
                               active: .constant(true),
                               action: {
-            
-            
+            NominationFlowCoordinator.shared.createNomination = true
+            viewModel.buttonAction()
         })
     }
     
@@ -85,8 +83,8 @@ private extension NominationSubmittedView {
         ActionButtonViewModel(title: backButton,
                               active: .constant(true),
                               action: {
-            
-            
+            NominationFlowCoordinator.shared.back = true
+            viewModel.buttonAction()
         })
     }
 }

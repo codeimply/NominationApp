@@ -9,11 +9,14 @@
 import SwiftUI
 
 struct NominationSubmittedView: View {
+    
+//    @ObservedObject var viewModel: ViewModel
+    
     var body: some View {
         
         VStack(spacing: 0) {
             /* Reused code implemented for the title */
-            HeaderBarView(title: "Nomination Submitted")
+            HeaderBarView(title: Content.Title.nominationSubmittedTitle)
             
             ScrollView {
                 
@@ -23,13 +26,13 @@ struct NominationSubmittedView: View {
                     .padding(.bottom, 24)
                 
                 VStack {
-                    Text("Nomination submitted")
+                    Text(Content.Title.nominationSubmittedTitle)
                         .textCase(.uppercase)
                         .font(Font.custom("Poppins-Bold", size: 32))
                         .multilineTextAlignment(.center)
                         .padding(.bottom, 16)
                     
-                    Text("Thank you for taking the time to fill out this form! Why not nominate another cube?")
+                    Text(Content.Description.nominationSubmittedDescription)
                         .font(Font.custom("Anonymous Pro", size: 16))
                         .multilineTextAlignment(.center)
                         .frame(width: 350)
@@ -40,6 +43,7 @@ struct NominationSubmittedView: View {
             }
         }
         .background(.cubeLightGrey)
+        .navigationBarBackButtonHidden(true)
         .overlay (
             ZStack {
                 /* created a component for custom button to reuse in other screens reducing the amount of code */
@@ -50,11 +54,8 @@ struct NominationSubmittedView: View {
                     CustomBorderButtonView(viewModel: backToHomeButtonViewModel, foregroundColor: .black, frameWidth: 340, frameHeight: 48)
                 }
             }
-                .frame(maxWidth: .infinity)
-                .padding(30)
-                .background(.white)
-                .offset(y: 330)
-                .shadow(.strong)
+                .customLargeTabStyle() // custom modifiers
+            
         )
 
     }
@@ -69,7 +70,7 @@ private extension NominationSubmittedView {
     var createNewNominationButtonViewModel: ActionButtonViewModel {
         
         /* created protocol that holds blueprint of common properties for a button */
-        ActionButtonViewModel(title: "Create new nomination",
+        ActionButtonViewModel(title: Content.ButtonLabel.createNewNominations,
                               active: .constant(true),
                               action: {
             
@@ -80,7 +81,7 @@ private extension NominationSubmittedView {
     var backToHomeButtonViewModel: ActionButtonViewModel {
         
         /* created protocol that holds blueprint of common properties for a button */
-        ActionButtonViewModel(title: "Back to home",
+        ActionButtonViewModel(title: Content.ButtonLabel.backToHome,
                               active: .constant(true),
                               action: {
             

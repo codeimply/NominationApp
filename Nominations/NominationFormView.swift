@@ -10,22 +10,43 @@ import SwiftUI
 
 struct NominationFormView: View {
     
+    // MARK: - Strings
+    let headerTitle = Content.Title.createNominationTitle
+    var nomineeTitle = Content.Title.nomineeNameTitle
+    var nomineeDescription = Content.Description.nomineeNameDescription
+    var cubesNameTitle = Content.Title.cubesNameTitle
+    var nomineeReasoningTitle = Content.Title.nomineeReasoningTitle
+    var nomineeReasoningDescription = Content.Description.nomineeReasoningDescription
+    var reasoningTitle = Content.Title.reasoningTitle
+    var feedbackDescription = Content.Description.feedbackDescription
+    var submitButton = Content.ButtonLabel.submit
+    var backButton = Content.ButtonLabel.back
+    
     @State private var reasoning: String = ""
     @State private var activeSelectedOption = false
     @State private var activeFieldText = false
     @State private var activeRadioButton = false
     
+    @State var nominationSubmitted = false
     
-    @State private var showPicker = false
+    let options = ["Select Option", "David Jones", "Lorem Ipsum"]
     
-    var options = ["Select Option", "One", "Two", "Three"]
-    @State private var selectedOption = "One"
+    let radioButtonData = [
+        RadioButtonViewModel(image: "VeryUnfairIcon", title: "Very Unfair"),
+        RadioButtonViewModel(image: "FairIcon", title: "Fair"),
+        RadioButtonViewModel(image: "NotSureIcon", title: "Not Sure"),
+        RadioButtonViewModel(image: "FairHappyIcon", title: "Fair"),
+        RadioButtonViewModel(image: "VeryFairHappyIcon", title: "Very Fair")
+    ]
     
     var body: some View {
         
         VStack(spacing: 0) {
+            
+            nominationSubmittedNavigationLink
+            
             /* Reused code implemented for the title */
-            HeaderBarView(title: "Create a nomination")
+            HeaderBarView(title: headerTitle)
             ScrollView {
                 
                 Image("NominationFormHeader")
@@ -35,34 +56,23 @@ struct NominationFormView: View {
                 
                 VStack(alignment: .leading) {
                     
-                    Text("I’d like to nominate... ")
-                        .font(Font.custom("Poppins-Bold", size: 18))
-                        .padding(.bottom, 6)
-                        .textCase(.uppercase)
+                    Text(nomineeTitle)
+                        .customSubtitleStyle() // custom modifiers
                     
-                    
-                    Text("Please select a cube who you feel has done something honourable this month or just all round has a great work ethic.")
-                        .font(Font.custom("Anonymous Pro", size: 16))
-                        .foregroundColor(.cubeDarkGrey)
-                        .multilineTextAlignment(.leading)
-                        .lineSpacing(5.0)
+                    Text(nomineeDescription)
+                        .customDescriptionStyle()
                     
                     VStack(alignment: .leading) {
                         
-                        HStack {
-                            Text("* ")
-                                .foregroundColor(.cubePink2) +
-                            
-                            Text("Cube's name")
-                        }
-                        .font(Font.custom("Poppins-Bold", size: 16))
+                        /* Reduced amount of code compared to concatenate and ensures customisation */
+                        Text("\(Text("* ").foregroundColor(.cubePink2)) \(cubesNameTitle)")
+                            .font(Font.custom("Poppins-Bold", size: 16))
                         
-                        namePicker
+                        /* Ability to customise and reuse */
+                        PickerView(activeSelectedOption: $activeSelectedOption, options: options)
                             .onTapGesture {
                                 activeSelectedOption = true
                             }
-                        
-                        
                     }
                     .padding(.top, 34)
                     
@@ -70,33 +80,21 @@ struct NominationFormView: View {
                         .overlay(.cubeMidGrey)
                         .padding([.top, .bottom], 34)
                     
-                    Text("I’d like to nominate this cube because...")
-                        .font(Font.custom("Poppins-Bold", size: 18))
-                        .padding(.bottom, 6)
-                        .textCase(.uppercase)
+                    Text(nomineeReasoningTitle)
+                        .customSubtitleStyle()
                     
-                    Text("Please let us know why you think this cube deserves the ‘cube of the month’ title 🏆⭐")
-                        .font(Font.custom("Anonymous Pro", size: 16))
-                        .foregroundColor(.cubeDarkGrey)
-                        .multilineTextAlignment(.leading)
-                        .lineSpacing(5.0)
+                    Text(nomineeReasoningDescription)
+                        .customDescriptionStyle()
                         .padding(.bottom, 34)
                     
-                    HStack {
-                        Text("* ")
-                            .foregroundColor(.cubePink2) +
-                        
-                        Text("Reasoning")
-                    }
-                    .font(Font.custom("Poppins-Bold", size: 16))
+                    /* Reduced amount of code compared to concatenate and ensures customisation */
+                    Text("\(Text("* ").foregroundColor(.cubePink2)) \(reasoningTitle)")
+                        .font(Font.custom("Poppins-Bold", size: 16))
                     
-                    TextField( "Given Name",
-                               text: $reasoning)
+                    TextField("Given Name",
+                              text: $reasoning)
                     .border(activeFieldText ? .cubeDarkGrey : .cubeMidGrey)
-                    .font(Font.custom("Anonymous Pro", size: 16))
-                    .foregroundColor(.cubeDarkGrey)
-                    .multilineTextAlignment(.leading)
-                    .lineSpacing(5.0)
+                    .customDescriptionStyle()
                     .onTapGesture {
                         activeFieldText = true
                     }
@@ -105,25 +103,22 @@ struct NominationFormView: View {
                         .overlay(.cubeMidGrey)
                         .padding([.top, .bottom], 34)
                     
-                    HStack {
-                        
-                        Text("Is how we currently run ") +
-                        
-                        Text("cube of the month ")
-                            .foregroundColor(.cubePink2) +
-                        
-                        Text("fair?")
-                    }
-                    .font(Font.custom("Poppins-Bold", size: 18))
-                    .padding(.bottom, 6)
-                    .textCase(.uppercase)
+                    /* Reduced amount of code compared to concatenate and ensures customisation */
+                    Text("Is how we currently run \( Text("cube of the month").foregroundColor(.cubePink2)) fair?")
+                        .customSubtitleStyle()
                     
-                    Text("As you know, out the nominees chosen, we spin a wheel to pick the cube of the month. What’s your opinion on this method?")
-                        .font(Font.custom("Anonymous Pro", size: 16))
-                        .foregroundColor(.cubeDarkGrey)
-                        .multilineTextAlignment(.leading)
-                        .lineSpacing(5.0)
+                    Text(feedbackDescription)
+                        .customDescriptionStyle()
                         .padding(.bottom, 34)
+                    
+                    /* Ability to customise and reuse
+                     ForEach reduces the amount of code to create multiple buttons */
+                    ForEach(radioButtonData) { data in
+                        RadioButtonView(image: data.image, title: data.title)
+                    }
+                    
+                    /* Pushes content up from behind custom tab bar */
+                    Spacer(minLength: 90)
                     
                 }
                 .padding([.leading, .trailing], 16)
@@ -131,6 +126,7 @@ struct NominationFormView: View {
             }
         }
         .background(.cubeLightGrey)
+        .navigationBarBackButtonHidden(true)
         .overlay (
             ZStack {
                 /* created a component for custom button to reuse in other screens reducing the amount of code */
@@ -141,11 +137,7 @@ struct NominationFormView: View {
                     CustomButtonView(viewModel: submitNominationButtonViewModel, backgroundColor: .cubeMidGrey, foregroundColor: .cubeLightGrey, frameWidth: 200, frameHeight: 50)
                 }
             }
-                .frame(maxWidth: .infinity)
-                .padding(21)
-                .background(.white)
-                .offset(y: 360)
-                .shadow(.strong)
+                .customTabStyle() // custom modifiers
         )
     }
 }
@@ -154,23 +146,33 @@ struct NominationFormView: View {
     NominationFormView()
 }
 
+extension NominationFormView {
+    
+    var nominationSubmittedNavigationLink: some View {
+        NavigationLink(destination: NominationSubmittedView(),
+                       isActive: $nominationSubmitted) {
+            EmptyView()
+        }
+                       .isDetailLink(false)
+    }
+}
+
+/* created protocol that holds blueprint of common properties for a button */
 private extension NominationFormView {
     
     var submitNominationButtonViewModel: ActionButtonViewModel {
         
-        /* created protocol that holds blueprint of common properties for a button */
-        ActionButtonViewModel(title: "Submit nomination",
+        ActionButtonViewModel(title: submitButton,
                               active: .constant(true),
                               action: {
-            
+            nominationSubmitted = true
             
         })
     }
     
     var backButtonViewModel: ActionButtonViewModel {
         
-        /* created protocol that holds blueprint of common properties for a button */
-        ActionButtonViewModel(title: "Back",
+        ActionButtonViewModel(title: backButton,
                               active: .constant(true),
                               action: {
             
@@ -179,43 +181,3 @@ private extension NominationFormView {
     }
 }
 
-private extension NominationFormView {
-    
-    var namePicker: some View {
-        
-        
-        Rectangle()
-            .stroke(activeSelectedOption ? .cubeDarkGrey : .cubeMidGrey, lineWidth: 1)
-            .frame(height: 35)
-            .overlay (
-                ZStack {
-                    
-                    HStack {
-                        Text("\(selectedOption)")
-                            .font(Font.custom("Anonymous Pro", size: 16))
-                            .frame(width: 310, alignment: .leading)
-                        
-                        Image(systemName: "chevron.down")
-                            .frame(width: 5, height: 5)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.cubePink2)
-                    }
-
-                    HStack {
-                        
-                        Picker("", selection: $selectedOption) {
-                            ForEach(options, id: \.self) {
-                                Text($0)
-                            }
-                        }
-                        .pickerStyle(.menu)
-                        .opacity(0.025)
-                        .onChange(of: selectedOption) {
-                            activeSelectedOption = false
-                        }
-                    }
-
-                }
-            )
-    }
-}

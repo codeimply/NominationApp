@@ -44,7 +44,6 @@ struct HeaderBarView: View {
 }
 
 // MARK: - Previews
-
 #Preview("HeaderBarView (logo)") {
     VStack {
         HeaderBarView()

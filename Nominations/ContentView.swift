@@ -9,33 +9,48 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var createNomination = false
+    
     var body: some View {
-        
-        VStack(spacing: 0) {
-            HeaderBarView()
-            /* moved the NotinationsHeaderView() out of ScrollView to make it Sticky */
-            NominationsHeaderView()
-            ScrollView {
-                
+    
+        NavigationView {
+            VStack(spacing: 0) {
+            createNominationNavigationLink
+
+                    
+                    HeaderBarView()
+                    /* moved the NotinationsHeaderView() out of ScrollView to make it Sticky */
+                    NominationsHeaderView()
+                    
+                    ScrollView {
+                       
+                                        }
             }
         }
         .background(.cubeLightGrey)
+        .navigationBarBackButtonHidden(true)
         .overlay (
             ZStack {
-                /* created a component for custom button to reuse in other screens reducing the amount of code */
-                CustomButtonView(viewModel: nominationButtonViewModel, backgroundColor: .black, foregroundColor: .white, frameWidth: 340, frameHeight: 50)
+                    /* created a component for custom button to reuse in other screens reducing the amount of code */
+                    CustomButtonView(viewModel: nominationButtonViewModel, backgroundColor: .black, foregroundColor: .white, frameWidth: 340, frameHeight: 50)
             }
-                .frame(maxWidth: .infinity)
-                .padding(21)
-                .background(.white)
-                .offset(y: 360)
-                .shadow(.strong)
+                .customTabStyle()
         )
     }
 }
 
-#Preview {
-    ContentView()
+extension ContentView {
+    
+    var createNominationNavigationLink: some View {
+        
+        NavigationLink(destination: NominationFormView(),
+                       isActive: $createNomination) {
+            EmptyView()
+        }
+        .isDetailLink(false)
+        
+    }
 }
 
 private extension ContentView {
@@ -43,11 +58,13 @@ private extension ContentView {
     var nominationButtonViewModel: ActionButtonViewModel {
         
         /* created protocol that holds blueprint of common properties for a button */
-        ActionButtonViewModel(title: "Create new nominations",
+        ActionButtonViewModel(title: Content.ButtonLabel.createNewNominations,
                               active: .constant(true),
                               action: {
-            
-            
+            createNomination = true
         })
     }
 }
+
+
+

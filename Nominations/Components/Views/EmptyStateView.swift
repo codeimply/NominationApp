@@ -16,7 +16,7 @@ struct EmptyStateView: View {
             Image("EmptyState")
                 .padding(.bottom, 20)
             
-            Text("Once you submit a nomination, you will be able to see it here.")
+            Text(Content.Description.homeEmptyState)
                 .foregroundColor(.cubeDarkGrey)
                 .textCase(.uppercase)
                 .font(Font.custom("Poppins-Bold", size: 24))

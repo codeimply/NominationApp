@@ -63,6 +63,7 @@
 		1BA8D9DD2AE2962B008FBB3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1BA8D9E52AE29AF7008FBB3F /* FontName+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FontName+Names.swift"; sourceTree = "<group>"; };
 		1BA8D9E72AE29B3B008FBB3F /* TextStyle+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextStyle+Styles.swift"; sourceTree = "<group>"; };
+		255711642AF69B0600850FDC /* NominationsKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NominationsKit; sourceTree = "<group>"; };
 		258A2CAE2AF2B1310067AAFC /* ActionButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonProtocol.swift; sourceTree = "<group>"; };
 		258A2CB02AF2B1520067AAFC /* ActionButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonViewModel.swift; sourceTree = "<group>"; };
 		258A2CB22AF2B19F0067AAFC /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 		1BA8D9AC2AE290D7008FBB3F = {
 			isa = PBXGroup;
 			children = (
+				255711632AF69ACC00850FDC /* Kits */,
 				1BA8D9B72AE290D7008FBB3F /* Nominations */,
 				1BA8D9B62AE290D7008FBB3F /* Products */,
 			);
@@ -192,6 +194,14 @@
 				1BA8D9CE2AE29617008FBB3F /* Fonts */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		255711632AF69ACC00850FDC /* Kits */ = {
+			isa = PBXGroup;
+			children = (
+				255711642AF69B0600850FDC /* NominationsKit */,
+			);
+			path = Kits;
 			sourceTree = "<group>";
 		};
 		258A2CA12AF2B03B0067AAFC /* Views */ = {

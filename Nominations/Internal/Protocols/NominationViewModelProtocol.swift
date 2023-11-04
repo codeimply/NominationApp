@@ -14,4 +14,3 @@ public protocol NominationViewModelProtocol: ObservableObject {
     var nominationType: NominationType { get }
     var buttonAction: () -> Void { get set }
 }
-

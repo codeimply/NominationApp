@@ -9,7 +9,7 @@
 import SwiftUI
 
 /// Basic custom header bar for use in place of a navigation bar.
-/// 
+///
 /// Can display a `String` title, or the 3 Sided Cube logo icon.
 ///
 /// - Note: Does not include navigation features.

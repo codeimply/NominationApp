@@ -87,7 +87,7 @@ public class NominationFlowCoordinator: ObservableObject {
             
             if back {
                 goToHomePage()
-                back = false 
+                back = false
             }
             
         case .submitNomination:
@@ -95,7 +95,7 @@ public class NominationFlowCoordinator: ObservableObject {
             
             if back {
                 goToHomePage()
-                back = false 
+                back = false
             }
         }
     }
@@ -127,4 +127,3 @@ private extension NominationFlowCoordinator {
         static let currentStageKey = "currentStageKey"
     }
 }
-

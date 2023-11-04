@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-/// Creates flow views 
+/// Creates flow views
 public enum NominationType: Int, CaseIterable {
     
     case home
@@ -48,6 +48,4 @@ extension NominationType {
                                     screenActionHasOccurred: screenActionHasOccurred)
         }
     }
-    
-    
 }

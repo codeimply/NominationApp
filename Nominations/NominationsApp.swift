@@ -6,14 +6,13 @@
 //  Copyright © 2023 3 Sided Cube (UK) Ltd. All rights reserved.
 //
 
-import NominationsKit
 import SwiftUI
 
 @main
 struct NominationsApp: App {
     var body: some Scene {
         WindowGroup {
-            NominationsKitUI().nominationsView()
+            NominationFlow(pages: NominationType.fullNominationFlow)
         }
     }
 }

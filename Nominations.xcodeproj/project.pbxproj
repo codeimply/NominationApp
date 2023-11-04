@@ -11,7 +11,30 @@
 		1BA8D9C02AE290DA008FBB3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA8D9BF2AE290DA008FBB3F /* Preview Assets.xcassets */; };
 		1BA8D9E22AE29ACD008FBB3F /* CubeFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1BA8D9E12AE29ACD008FBB3F /* CubeFoundation */; };
 		1BA8D9E42AE29ACD008FBB3F /* CubeFoundationSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1BA8D9E32AE29ACD008FBB3F /* CubeFoundationSwiftUI */; };
-		254397952AF6B89F00389169 /* NominationsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 254397942AF6B89F00389169 /* NominationsKit */; };
+		252143D22AF6DD9B0097D3C5 /* ActionButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143D12AF6DD9B0097D3C5 /* ActionButtonProtocol.swift */; };
+		252143D82AF6DEAB0097D3C5 /* NominationViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143D72AF6DEAB0097D3C5 /* NominationViewModelProtocol.swift */; };
+		252143DA2AF6DF1B0097D3C5 /* ActionButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143D92AF6DF1B0097D3C5 /* ActionButtonViewModel.swift */; };
+		252143DC2AF6DF330097D3C5 /*  NominationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143DB2AF6DF330097D3C5 /*  NominationViewModel.swift */; };
+		252143DE2AF6DF4B0097D3C5 /* RadioButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143DD2AF6DF4B0097D3C5 /* RadioButtonViewModel.swift */; };
+		252143E02AF6DF6E0097D3C5 /* NominationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143DF2AF6DF6E0097D3C5 /* NominationFlow.swift */; };
+		252143E22AF6DF940097D3C5 /* NominationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143E12AF6DF940097D3C5 /* NominationFlowCoordinator.swift */; };
+		252143E42AF6DFD40097D3C5 /* NominationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143E32AF6DFD40097D3C5 /* NominationStatus.swift */; };
+		252143E62AF6DFEC0097D3C5 /* NominationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143E52AF6DFEC0097D3C5 /* NominationType.swift */; };
+		252143E82AF6E0350097D3C5 /* AreYouSureModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143E72AF6E0350097D3C5 /* AreYouSureModal.swift */; };
+		252143EA2AF6E05A0097D3C5 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143E92AF6E05A0097D3C5 /* CustomButtonView.swift */; };
+		252143EC2AF6E0730097D3C5 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143EB2AF6E0730097D3C5 /* EmptyStateView.swift */; };
+		252143EE2AF6E0880097D3C5 /* HeaderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143ED2AF6E0880097D3C5 /* HeaderBarView.swift */; };
+		252143F02AF6E0A40097D3C5 /* NominationsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143EF2AF6E0A40097D3C5 /* NominationsHeaderView.swift */; };
+		252143F22AF6E0C60097D3C5 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143F12AF6E0C60097D3C5 /* PickerView.swift */; };
+		252143F42AF6E0E30097D3C5 /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143F32AF6E0E30097D3C5 /* RadioButtonView.swift */; };
+		2522DB4D2AF6D1EF004C3EAA /* NominationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2522DB4A2AF6D1EE004C3EAA /* NominationFormView.swift */; };
+		2522DB4E2AF6D1EF004C3EAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2522DB4B2AF6D1EF004C3EAA /* ContentView.swift */; };
+		2522DB4F2AF6D1EF004C3EAA /* NominationSubmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2522DB4C2AF6D1EF004C3EAA /* NominationSubmittedView.swift */; };
+		25CCFE862AF6DC5A003E2CEC /* View+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CCFE852AF6DC5A003E2CEC /* View+Styles.swift */; };
+		25CCFE8B2AF6DC72003E2CEC /* FigmaShadow+Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CCFE8A2AF6DC72003E2CEC /* FigmaShadow+Shadows.swift */; };
+		25CCFE8C2AF6DC72003E2CEC /* FontName+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CCFE872AF6DC72003E2CEC /* FontName+Names.swift */; };
+		25CCFE8D2AF6DC72003E2CEC /* TextStyle+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CCFE882AF6DC72003E2CEC /* TextStyle+Styles.swift */; };
+		25CCFE8E2AF6DC72003E2CEC /* Defaults+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CCFE892AF6DC72003E2CEC /* Defaults+Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,7 +42,38 @@
 		1BA8D9B82AE290D7008FBB3F /* NominationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationsApp.swift; sourceTree = "<group>"; };
 		1BA8D9BF2AE290DA008FBB3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1BA8D9DD2AE2962B008FBB3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		255711642AF69B0600850FDC /* NominationsKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NominationsKit; sourceTree = "<group>"; };
+		252143D12AF6DD9B0097D3C5 /* ActionButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonProtocol.swift; sourceTree = "<group>"; };
+		252143D72AF6DEAB0097D3C5 /* NominationViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationViewModelProtocol.swift; sourceTree = "<group>"; };
+		252143D92AF6DF1B0097D3C5 /* ActionButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonViewModel.swift; sourceTree = "<group>"; };
+		252143DB2AF6DF330097D3C5 /*  NominationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NominationViewModel.swift"; sourceTree = "<group>"; };
+		252143DD2AF6DF4B0097D3C5 /* RadioButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonViewModel.swift; sourceTree = "<group>"; };
+		252143DF2AF6DF6E0097D3C5 /* NominationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationFlow.swift; sourceTree = "<group>"; };
+		252143E12AF6DF940097D3C5 /* NominationFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationFlowCoordinator.swift; sourceTree = "<group>"; };
+		252143E32AF6DFD40097D3C5 /* NominationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationStatus.swift; sourceTree = "<group>"; };
+		252143E52AF6DFEC0097D3C5 /* NominationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationType.swift; sourceTree = "<group>"; };
+		252143E72AF6E0350097D3C5 /* AreYouSureModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreYouSureModal.swift; sourceTree = "<group>"; };
+		252143E92AF6E05A0097D3C5 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
+		252143EB2AF6E0730097D3C5 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		252143ED2AF6E0880097D3C5 /* HeaderBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBarView.swift; sourceTree = "<group>"; };
+		252143EF2AF6E0A40097D3C5 /* NominationsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationsHeaderView.swift; sourceTree = "<group>"; };
+		252143F12AF6E0C60097D3C5 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		252143F32AF6E0E30097D3C5 /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
+		2522DB4A2AF6D1EE004C3EAA /* NominationFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationFormView.swift; sourceTree = "<group>"; };
+		2522DB4B2AF6D1EF004C3EAA /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2522DB4C2AF6D1EF004C3EAA /* NominationSubmittedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationSubmittedView.swift; sourceTree = "<group>"; };
+		2522DB542AF6D1F5004C3EAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		25CCFE852AF6DC5A003E2CEC /* View+Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Styles.swift"; sourceTree = "<group>"; };
+		25CCFE872AF6DC72003E2CEC /* FontName+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FontName+Names.swift"; sourceTree = "<group>"; };
+		25CCFE882AF6DC72003E2CEC /* TextStyle+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextStyle+Styles.swift"; sourceTree = "<group>"; };
+		25CCFE892AF6DC72003E2CEC /* Defaults+Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Strings.swift"; sourceTree = "<group>"; };
+		25CCFE8A2AF6DC72003E2CEC /* FigmaShadow+Shadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FigmaShadow+Shadows.swift"; sourceTree = "<group>"; };
+		25CCFE912AF6DC97003E2CEC /* AnonymousPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Bold.ttf"; sourceTree = "<group>"; };
+		25CCFE922AF6DC97003E2CEC /* AnonymousPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Regular.ttf"; sourceTree = "<group>"; };
+		25CCFE942AF6DC97003E2CEC /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		25CCFE952AF6DC97003E2CEC /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		25CCFE962AF6DC97003E2CEC /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		25CCFE972AF6DC97003E2CEC /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		25CCFE982AF6DC97003E2CEC /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,7 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				254397952AF6B89F00389169 /* NominationsKit in Frameworks */,
 				1BA8D9E42AE29ACD008FBB3F /* CubeFoundationSwiftUI in Frameworks */,
 				1BA8D9E22AE29ACD008FBB3F /* CubeFoundation in Frameworks */,
 			);
@@ -39,7 +92,6 @@
 		1BA8D9AC2AE290D7008FBB3F = {
 			isa = PBXGroup;
 			children = (
-				255711632AF69ACC00850FDC /* Kits */,
 				1BA8D9B72AE290D7008FBB3F /* Nominations */,
 				1BA8D9B62AE290D7008FBB3F /* Products */,
 				254397932AF6B89F00389169 /* Frameworks */,
@@ -57,6 +109,9 @@
 		1BA8D9B72AE290D7008FBB3F /* Nominations */ = {
 			isa = PBXGroup;
 			children = (
+				2522DB482AF6D1D4004C3EAA /* External */,
+				25CCFE772AF6DB5B003E2CEC /* Internal */,
+				2522DB502AF6D1F5004C3EAA /* Resources */,
 				1BA8D9DD2AE2962B008FBB3F /* Info.plist */,
 				1BA8D9B82AE290D7008FBB3F /* NominationsApp.swift */,
 				1BA8D9BE2AE290DA008FBB3F /* Preview Content */,
@@ -72,6 +127,38 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		2522DB482AF6D1D4004C3EAA /* External */ = {
+			isa = PBXGroup;
+			children = (
+				2522DB492AF6D1E4004C3EAA /* Views */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		2522DB492AF6D1E4004C3EAA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2522DB4B2AF6D1EF004C3EAA /* ContentView.swift */,
+				2522DB4A2AF6D1EE004C3EAA /* NominationFormView.swift */,
+				2522DB4C2AF6D1EF004C3EAA /* NominationSubmittedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2522DB502AF6D1F5004C3EAA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				25CCFE892AF6DC72003E2CEC /* Defaults+Strings.swift */,
+				25CCFE8A2AF6DC72003E2CEC /* FigmaShadow+Shadows.swift */,
+				25CCFE872AF6DC72003E2CEC /* FontName+Names.swift */,
+				25CCFE882AF6DC72003E2CEC /* TextStyle+Styles.swift */,
+				2522DB542AF6D1F5004C3EAA /* Assets.xcassets */,
+				25CCFE852AF6DC5A003E2CEC /* View+Styles.swift */,
+				25CCFE8F2AF6DC97003E2CEC /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		254397932AF6B89F00389169 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,12 +166,105 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		255711632AF69ACC00850FDC /* Kits */ = {
+		25CCFE772AF6DB5B003E2CEC /* Internal */ = {
 			isa = PBXGroup;
 			children = (
-				255711642AF69B0600850FDC /* NominationsKit */,
+				25CCFE832AF6DBD3003E2CEC /* Protocols */,
+				25CCFE7C2AF6DBBA003E2CEC /* ViewModels */,
+				25CCFE7B2AF6DBA5003E2CEC /* Views */,
+				25CCFE7A2AF6DB97003E2CEC /* Components */,
+				25CCFE792AF6DB8D003E2CEC /* Logic */,
+				25CCFE782AF6DB77003E2CEC /* Enums */,
 			);
-			path = Kits;
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		25CCFE782AF6DB77003E2CEC /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				252143E32AF6DFD40097D3C5 /* NominationStatus.swift */,
+				252143E52AF6DFEC0097D3C5 /* NominationType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		25CCFE792AF6DB8D003E2CEC /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				252143E12AF6DF940097D3C5 /* NominationFlowCoordinator.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		25CCFE7A2AF6DB97003E2CEC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				252143E72AF6E0350097D3C5 /* AreYouSureModal.swift */,
+				252143E92AF6E05A0097D3C5 /* CustomButtonView.swift */,
+				252143EB2AF6E0730097D3C5 /* EmptyStateView.swift */,
+				252143ED2AF6E0880097D3C5 /* HeaderBarView.swift */,
+				252143EF2AF6E0A40097D3C5 /* NominationsHeaderView.swift */,
+				252143F12AF6E0C60097D3C5 /* PickerView.swift */,
+				252143F32AF6E0E30097D3C5 /* RadioButtonView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		25CCFE7B2AF6DBA5003E2CEC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				252143DF2AF6DF6E0097D3C5 /* NominationFlow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		25CCFE7C2AF6DBBA003E2CEC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				252143D92AF6DF1B0097D3C5 /* ActionButtonViewModel.swift */,
+				252143DB2AF6DF330097D3C5 /*  NominationViewModel.swift */,
+				252143DD2AF6DF4B0097D3C5 /* RadioButtonViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		25CCFE832AF6DBD3003E2CEC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				252143D12AF6DD9B0097D3C5 /* ActionButtonProtocol.swift */,
+				252143D72AF6DEAB0097D3C5 /* NominationViewModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		25CCFE8F2AF6DC97003E2CEC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				25CCFE902AF6DC97003E2CEC /* Anonymous Pro */,
+				25CCFE932AF6DC97003E2CEC /* Poppins */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		25CCFE902AF6DC97003E2CEC /* Anonymous Pro */ = {
+			isa = PBXGroup;
+			children = (
+				25CCFE912AF6DC97003E2CEC /* AnonymousPro-Bold.ttf */,
+				25CCFE922AF6DC97003E2CEC /* AnonymousPro-Regular.ttf */,
+			);
+			path = "Anonymous Pro";
+			sourceTree = "<group>";
+		};
+		25CCFE932AF6DC97003E2CEC /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				25CCFE942AF6DC97003E2CEC /* Poppins-Light.ttf */,
+				25CCFE952AF6DC97003E2CEC /* Poppins-Medium.ttf */,
+				25CCFE962AF6DC97003E2CEC /* Poppins-Regular.ttf */,
+				25CCFE972AF6DC97003E2CEC /* Poppins-Bold.ttf */,
+				25CCFE982AF6DC97003E2CEC /* Poppins-SemiBold.ttf */,
+			);
+			path = Poppins;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,7 +286,6 @@
 			packageProductDependencies = (
 				1BA8D9E12AE29ACD008FBB3F /* CubeFoundation */,
 				1BA8D9E32AE29ACD008FBB3F /* CubeFoundationSwiftUI */,
-				254397942AF6B89F00389169 /* NominationsKit */,
 			);
 			productName = Nominations;
 			productReference = 1BA8D9B52AE290D7008FBB3F /* Nominations.app */;
@@ -165,7 +344,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				252143DA2AF6DF1B0097D3C5 /* ActionButtonViewModel.swift in Sources */,
+				252143D22AF6DD9B0097D3C5 /* ActionButtonProtocol.swift in Sources */,
+				252143E22AF6DF940097D3C5 /* NominationFlowCoordinator.swift in Sources */,
+				252143DC2AF6DF330097D3C5 /*  NominationViewModel.swift in Sources */,
+				2522DB4F2AF6D1EF004C3EAA /* NominationSubmittedView.swift in Sources */,
+				252143F02AF6E0A40097D3C5 /* NominationsHeaderView.swift in Sources */,
+				252143D82AF6DEAB0097D3C5 /* NominationViewModelProtocol.swift in Sources */,
+				252143EC2AF6E0730097D3C5 /* EmptyStateView.swift in Sources */,
+				25CCFE8B2AF6DC72003E2CEC /* FigmaShadow+Shadows.swift in Sources */,
+				252143E62AF6DFEC0097D3C5 /* NominationType.swift in Sources */,
+				252143EE2AF6E0880097D3C5 /* HeaderBarView.swift in Sources */,
+				252143E42AF6DFD40097D3C5 /* NominationStatus.swift in Sources */,
+				252143E82AF6E0350097D3C5 /* AreYouSureModal.swift in Sources */,
+				25CCFE8E2AF6DC72003E2CEC /* Defaults+Strings.swift in Sources */,
+				252143E02AF6DF6E0097D3C5 /* NominationFlow.swift in Sources */,
+				25CCFE8C2AF6DC72003E2CEC /* FontName+Names.swift in Sources */,
+				2522DB4D2AF6D1EF004C3EAA /* NominationFormView.swift in Sources */,
+				25CCFE8D2AF6DC72003E2CEC /* TextStyle+Styles.swift in Sources */,
+				252143EA2AF6E05A0097D3C5 /* CustomButtonView.swift in Sources */,
+				252143F42AF6E0E30097D3C5 /* RadioButtonView.swift in Sources */,
+				252143DE2AF6DF4B0097D3C5 /* RadioButtonViewModel.swift in Sources */,
+				252143F22AF6E0C60097D3C5 /* PickerView.swift in Sources */,
 				1BA8D9B92AE290D7008FBB3F /* NominationsApp.swift in Sources */,
+				25CCFE862AF6DC5A003E2CEC /* View+Styles.swift in Sources */,
+				2522DB4E2AF6D1EF004C3EAA /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Nominations/Preview Content\"";
 				DEVELOPMENT_TEAM = 25H7BM6YWK;
 				ENABLE_PREVIEWS = YES;
@@ -330,7 +533,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"Nominations/Preview Content\"";
 				DEVELOPMENT_TEAM = 25H7BM6YWK;
 				ENABLE_PREVIEWS = YES;
@@ -401,10 +604,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1BA8D9E02AE29ACD008FBB3F /* XCRemoteSwiftPackageReference "cubefoundation-ios" */;
 			productName = CubeFoundationSwiftUI;
-		};
-		254397942AF6B89F00389169 /* NominationsKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = NominationsKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

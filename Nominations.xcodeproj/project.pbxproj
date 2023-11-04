@@ -7,82 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B8FA0812AE2B624009E185D /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B8FA0802AE2B61F009E185D /* Poppins-Medium.ttf */; };
-		1B8FA0832AE2B69A009E185D /* HeaderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FA0822AE2B69A009E185D /* HeaderBarView.swift */; };
-		1B8FA0862AE2BB92009E185D /* NominationsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8FA0852AE2BB92009E185D /* NominationsHeaderView.swift */; };
 		1BA8D9B92AE290D7008FBB3F /* NominationsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8D9B82AE290D7008FBB3F /* NominationsApp.swift */; };
-		1BA8D9BD2AE290DA008FBB3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA8D9BC2AE290DA008FBB3F /* Assets.xcassets */; };
 		1BA8D9C02AE290DA008FBB3F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BA8D9BF2AE290DA008FBB3F /* Preview Assets.xcassets */; };
-		1BA8D9CD2AE294B3008FBB3F /* FigmaShadow+Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8D9CC2AE294B3008FBB3F /* FigmaShadow+Shadows.swift */; };
-		1BA8D9D72AE29617008FBB3F /* AnonymousPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BA8D9D02AE29617008FBB3F /* AnonymousPro-Bold.ttf */; };
-		1BA8D9D82AE29617008FBB3F /* AnonymousPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BA8D9D12AE29617008FBB3F /* AnonymousPro-Regular.ttf */; };
-		1BA8D9D92AE29617008FBB3F /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BA8D9D32AE29617008FBB3F /* Poppins-Light.ttf */; };
-		1BA8D9DA2AE29617008FBB3F /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BA8D9D42AE29617008FBB3F /* Poppins-Regular.ttf */; };
-		1BA8D9DB2AE29617008FBB3F /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BA8D9D52AE29617008FBB3F /* Poppins-Bold.ttf */; };
-		1BA8D9DC2AE29617008FBB3F /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1BA8D9D62AE29617008FBB3F /* Poppins-SemiBold.ttf */; };
 		1BA8D9E22AE29ACD008FBB3F /* CubeFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 1BA8D9E12AE29ACD008FBB3F /* CubeFoundation */; };
 		1BA8D9E42AE29ACD008FBB3F /* CubeFoundationSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1BA8D9E32AE29ACD008FBB3F /* CubeFoundationSwiftUI */; };
-		1BA8D9E62AE29AF7008FBB3F /* FontName+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8D9E52AE29AF7008FBB3F /* FontName+Names.swift */; };
-		1BA8D9E82AE29B3B008FBB3F /* TextStyle+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA8D9E72AE29B3B008FBB3F /* TextStyle+Styles.swift */; };
-		258A2CAF2AF2B1310067AAFC /* ActionButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CAE2AF2B1310067AAFC /* ActionButtonProtocol.swift */; };
-		258A2CB12AF2B1520067AAFC /* ActionButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB02AF2B1520067AAFC /* ActionButtonViewModel.swift */; };
-		258A2CB32AF2B19F0067AAFC /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB22AF2B19F0067AAFC /* CustomButtonView.swift */; };
-		258A2CB72AF2BB860067AAFC /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB62AF2BB860067AAFC /* EmptyStateView.swift */; };
-		258A2CB92AF2E5560067AAFC /* NominationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CB82AF2E5550067AAFC /* NominationFormView.swift */; };
-		258A2CBB2AF2EB570067AAFC /* NominationSubmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CBA2AF2EB570067AAFC /* NominationSubmittedView.swift */; };
-		258A2CBD2AF3193A0067AAFC /* Defaults+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CBC2AF3193A0067AAFC /* Defaults+Strings.swift */; };
-		258A2CBF2AF3DB950067AAFC /* View+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CBE2AF3DB950067AAFC /* View+Styles.swift */; };
-		258A2CC12AF3E2600067AAFC /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CC02AF3E2600067AAFC /* PickerView.swift */; };
-		258A2CC32AF3E4F20067AAFC /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CC22AF3E4F20067AAFC /* RadioButtonView.swift */; };
-		258A2CC62AF4014E0067AAFC /* RadioButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CC52AF4014E0067AAFC /* RadioButtonViewModel.swift */; };
-		258A2CD92AF53C9F0067AAFC /* NominationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CD82AF53C9F0067AAFC /* NominationFlow.swift */; };
-		258A2CDD2AF53CF00067AAFC /* NominationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CDB2AF53CEF0067AAFC /* NominationStatus.swift */; };
-		258A2CDE2AF53CF00067AAFC /* NominationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CDC2AF53CEF0067AAFC /* NominationType.swift */; };
-		258A2CE02AF53F040067AAFC /* NominationViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CDF2AF53F040067AAFC /* NominationViewModelProtocol.swift */; };
-		258A2CE22AF53F0E0067AAFC /* NominationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CE12AF53F0E0067AAFC /* NominationViewModel.swift */; };
-		258A2CE52AF53F6D0067AAFC /* NominationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CE42AF53F6D0067AAFC /* NominationFlowCoordinator.swift */; };
-		258A2CE72AF555480067AAFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CE62AF555480067AAFC /* ContentView.swift */; };
-		258A2CE92AF5789A0067AAFC /* AreYouSureModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258A2CE82AF5789A0067AAFC /* AreYouSureModal.swift */; };
+		254397952AF6B89F00389169 /* NominationsKit in Frameworks */ = {isa = PBXBuildFile; productRef = 254397942AF6B89F00389169 /* NominationsKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1B8FA0802AE2B61F009E185D /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
-		1B8FA0822AE2B69A009E185D /* HeaderBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBarView.swift; sourceTree = "<group>"; };
-		1B8FA0852AE2BB92009E185D /* NominationsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationsHeaderView.swift; sourceTree = "<group>"; };
 		1BA8D9B52AE290D7008FBB3F /* Nominations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nominations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA8D9B82AE290D7008FBB3F /* NominationsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationsApp.swift; sourceTree = "<group>"; };
-		1BA8D9BC2AE290DA008FBB3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BA8D9BF2AE290DA008FBB3F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1BA8D9CC2AE294B3008FBB3F /* FigmaShadow+Shadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FigmaShadow+Shadows.swift"; sourceTree = "<group>"; };
-		1BA8D9D02AE29617008FBB3F /* AnonymousPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Bold.ttf"; sourceTree = "<group>"; };
-		1BA8D9D12AE29617008FBB3F /* AnonymousPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Regular.ttf"; sourceTree = "<group>"; };
-		1BA8D9D32AE29617008FBB3F /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
-		1BA8D9D42AE29617008FBB3F /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
-		1BA8D9D52AE29617008FBB3F /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		1BA8D9D62AE29617008FBB3F /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		1BA8D9DD2AE2962B008FBB3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		1BA8D9E52AE29AF7008FBB3F /* FontName+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FontName+Names.swift"; sourceTree = "<group>"; };
-		1BA8D9E72AE29B3B008FBB3F /* TextStyle+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextStyle+Styles.swift"; sourceTree = "<group>"; };
 		255711642AF69B0600850FDC /* NominationsKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NominationsKit; sourceTree = "<group>"; };
-		258A2CAE2AF2B1310067AAFC /* ActionButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonProtocol.swift; sourceTree = "<group>"; };
-		258A2CB02AF2B1520067AAFC /* ActionButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonViewModel.swift; sourceTree = "<group>"; };
-		258A2CB22AF2B19F0067AAFC /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
-		258A2CB62AF2BB860067AAFC /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
-		258A2CB82AF2E5550067AAFC /* NominationFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationFormView.swift; sourceTree = "<group>"; };
-		258A2CBA2AF2EB570067AAFC /* NominationSubmittedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationSubmittedView.swift; sourceTree = "<group>"; };
-		258A2CBC2AF3193A0067AAFC /* Defaults+Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Strings.swift"; sourceTree = "<group>"; };
-		258A2CBE2AF3DB950067AAFC /* View+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Styles.swift"; sourceTree = "<group>"; };
-		258A2CC02AF3E2600067AAFC /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
-		258A2CC22AF3E4F20067AAFC /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
-		258A2CC52AF4014E0067AAFC /* RadioButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonViewModel.swift; sourceTree = "<group>"; };
-		258A2CD82AF53C9F0067AAFC /* NominationFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationFlow.swift; sourceTree = "<group>"; };
-		258A2CDB2AF53CEF0067AAFC /* NominationStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationStatus.swift; sourceTree = "<group>"; };
-		258A2CDC2AF53CEF0067AAFC /* NominationType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationType.swift; sourceTree = "<group>"; };
-		258A2CDF2AF53F040067AAFC /* NominationViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationViewModelProtocol.swift; sourceTree = "<group>"; };
-		258A2CE12AF53F0E0067AAFC /* NominationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationViewModel.swift; sourceTree = "<group>"; };
-		258A2CE42AF53F6D0067AAFC /* NominationFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationFlowCoordinator.swift; sourceTree = "<group>"; };
-		258A2CE62AF555480067AAFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		258A2CE82AF5789A0067AAFC /* AreYouSureModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreYouSureModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				254397952AF6B89F00389169 /* NominationsKit in Frameworks */,
 				1BA8D9E42AE29ACD008FBB3F /* CubeFoundationSwiftUI in Frameworks */,
 				1BA8D9E22AE29ACD008FBB3F /* CubeFoundation in Frameworks */,
 			);
@@ -98,24 +36,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B8FA0842AE2B69E009E185D /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				258A2CE32AF53F610067AAFC /* Logic */,
-				258A2CDA2AF53CB20067AAFC /* Enums */,
-				258A2CA92AF2B0690067AAFC /* Protocols */,
-				258A2CA22AF2B0480067AAFC /* ViewModels */,
-				258A2CA12AF2B03B0067AAFC /* Views */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		1BA8D9AC2AE290D7008FBB3F = {
 			isa = PBXGroup;
 			children = (
 				255711632AF69ACC00850FDC /* Kits */,
 				1BA8D9B72AE290D7008FBB3F /* Nominations */,
 				1BA8D9B62AE290D7008FBB3F /* Products */,
+				254397932AF6B89F00389169 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,13 +59,6 @@
 			children = (
 				1BA8D9DD2AE2962B008FBB3F /* Info.plist */,
 				1BA8D9B82AE290D7008FBB3F /* NominationsApp.swift */,
-				258A2CE62AF555480067AAFC /* ContentView.swift */,
-				258A2CB82AF2E5550067AAFC /* NominationFormView.swift */,
-				258A2CBA2AF2EB570067AAFC /* NominationSubmittedView.swift */,
-				258A2CE82AF5789A0067AAFC /* AreYouSureModal.swift */,
-				258A2CD82AF53C9F0067AAFC /* NominationFlow.swift */,
-				1B8FA0842AE2B69E009E185D /* Components */,
-				1BA8D9DE2AE29652008FBB3F /* Resources */,
 				1BA8D9BE2AE290DA008FBB3F /* Preview Content */,
 			);
 			path = Nominations;
@@ -152,48 +72,11 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		1BA8D9CE2AE29617008FBB3F /* Fonts */ = {
+		254397932AF6B89F00389169 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1BA8D9CF2AE29617008FBB3F /* Anonymous Pro */,
-				1BA8D9D22AE29617008FBB3F /* Poppins */,
 			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		1BA8D9CF2AE29617008FBB3F /* Anonymous Pro */ = {
-			isa = PBXGroup;
-			children = (
-				1BA8D9D02AE29617008FBB3F /* AnonymousPro-Bold.ttf */,
-				1BA8D9D12AE29617008FBB3F /* AnonymousPro-Regular.ttf */,
-			);
-			path = "Anonymous Pro";
-			sourceTree = "<group>";
-		};
-		1BA8D9D22AE29617008FBB3F /* Poppins */ = {
-			isa = PBXGroup;
-			children = (
-				1BA8D9D32AE29617008FBB3F /* Poppins-Light.ttf */,
-				1BA8D9D42AE29617008FBB3F /* Poppins-Regular.ttf */,
-				1B8FA0802AE2B61F009E185D /* Poppins-Medium.ttf */,
-				1BA8D9D62AE29617008FBB3F /* Poppins-SemiBold.ttf */,
-				1BA8D9D52AE29617008FBB3F /* Poppins-Bold.ttf */,
-			);
-			path = Poppins;
-			sourceTree = "<group>";
-		};
-		1BA8D9DE2AE29652008FBB3F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				1BA8D9BC2AE290DA008FBB3F /* Assets.xcassets */,
-				1BA8D9CC2AE294B3008FBB3F /* FigmaShadow+Shadows.swift */,
-				1BA8D9E52AE29AF7008FBB3F /* FontName+Names.swift */,
-				1BA8D9E72AE29B3B008FBB3F /* TextStyle+Styles.swift */,
-				258A2CBE2AF3DB950067AAFC /* View+Styles.swift */,
-				258A2CBC2AF3193A0067AAFC /* Defaults+Strings.swift */,
-				1BA8D9CE2AE29617008FBB3F /* Fonts */,
-			);
-			path = Resources;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		255711632AF69ACC00850FDC /* Kits */ = {
@@ -202,55 +85,6 @@
 				255711642AF69B0600850FDC /* NominationsKit */,
 			);
 			path = Kits;
-			sourceTree = "<group>";
-		};
-		258A2CA12AF2B03B0067AAFC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				1B8FA0822AE2B69A009E185D /* HeaderBarView.swift */,
-				1B8FA0852AE2BB92009E185D /* NominationsHeaderView.swift */,
-				258A2CB22AF2B19F0067AAFC /* CustomButtonView.swift */,
-				258A2CB62AF2BB860067AAFC /* EmptyStateView.swift */,
-				258A2CC02AF3E2600067AAFC /* PickerView.swift */,
-				258A2CC22AF3E4F20067AAFC /* RadioButtonView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		258A2CA22AF2B0480067AAFC /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				258A2CE12AF53F0E0067AAFC /* NominationViewModel.swift */,
-				258A2CC52AF4014E0067AAFC /* RadioButtonViewModel.swift */,
-				258A2CB02AF2B1520067AAFC /* ActionButtonViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		258A2CA92AF2B0690067AAFC /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				258A2CDF2AF53F040067AAFC /* NominationViewModelProtocol.swift */,
-				258A2CAE2AF2B1310067AAFC /* ActionButtonProtocol.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		258A2CDA2AF53CB20067AAFC /* Enums */ = {
-			isa = PBXGroup;
-			children = (
-				258A2CDB2AF53CEF0067AAFC /* NominationStatus.swift */,
-				258A2CDC2AF53CEF0067AAFC /* NominationType.swift */,
-			);
-			path = Enums;
-			sourceTree = "<group>";
-		};
-		258A2CE32AF53F610067AAFC /* Logic */ = {
-			isa = PBXGroup;
-			children = (
-				258A2CE42AF53F6D0067AAFC /* NominationFlowCoordinator.swift */,
-			);
-			path = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +106,7 @@
 			packageProductDependencies = (
 				1BA8D9E12AE29ACD008FBB3F /* CubeFoundation */,
 				1BA8D9E32AE29ACD008FBB3F /* CubeFoundationSwiftUI */,
+				254397942AF6B89F00389169 /* NominationsKit */,
 			);
 			productName = Nominations;
 			productReference = 1BA8D9B52AE290D7008FBB3F /* Nominations.app */;
@@ -320,14 +155,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BA8D9C02AE290DA008FBB3F /* Preview Assets.xcassets in Resources */,
-				1BA8D9D92AE29617008FBB3F /* Poppins-Light.ttf in Resources */,
-				1BA8D9DB2AE29617008FBB3F /* Poppins-Bold.ttf in Resources */,
-				1BA8D9D82AE29617008FBB3F /* AnonymousPro-Regular.ttf in Resources */,
-				1BA8D9DA2AE29617008FBB3F /* Poppins-Regular.ttf in Resources */,
-				1BA8D9DC2AE29617008FBB3F /* Poppins-SemiBold.ttf in Resources */,
-				1B8FA0812AE2B624009E185D /* Poppins-Medium.ttf in Resources */,
-				1BA8D9BD2AE290DA008FBB3F /* Assets.xcassets in Resources */,
-				1BA8D9D72AE29617008FBB3F /* AnonymousPro-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,31 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				258A2CE52AF53F6D0067AAFC /* NominationFlowCoordinator.swift in Sources */,
-				258A2CC62AF4014E0067AAFC /* RadioButtonViewModel.swift in Sources */,
-				258A2CB12AF2B1520067AAFC /* ActionButtonViewModel.swift in Sources */,
-				258A2CBB2AF2EB570067AAFC /* NominationSubmittedView.swift in Sources */,
-				258A2CE22AF53F0E0067AAFC /* NominationViewModel.swift in Sources */,
-				258A2CB72AF2BB860067AAFC /* EmptyStateView.swift in Sources */,
-				258A2CE02AF53F040067AAFC /* NominationViewModelProtocol.swift in Sources */,
-				258A2CAF2AF2B1310067AAFC /* ActionButtonProtocol.swift in Sources */,
-				258A2CDE2AF53CF00067AAFC /* NominationType.swift in Sources */,
-				258A2CD92AF53C9F0067AAFC /* NominationFlow.swift in Sources */,
-				258A2CBF2AF3DB950067AAFC /* View+Styles.swift in Sources */,
-				258A2CB92AF2E5560067AAFC /* NominationFormView.swift in Sources */,
-				1B8FA0862AE2BB92009E185D /* NominationsHeaderView.swift in Sources */,
-				258A2CE72AF555480067AAFC /* ContentView.swift in Sources */,
-				258A2CDD2AF53CF00067AAFC /* NominationStatus.swift in Sources */,
-				258A2CC12AF3E2600067AAFC /* PickerView.swift in Sources */,
-				258A2CBD2AF3193A0067AAFC /* Defaults+Strings.swift in Sources */,
-				258A2CB32AF2B19F0067AAFC /* CustomButtonView.swift in Sources */,
-				258A2CC32AF3E4F20067AAFC /* RadioButtonView.swift in Sources */,
-				1B8FA0832AE2B69A009E185D /* HeaderBarView.swift in Sources */,
 				1BA8D9B92AE290D7008FBB3F /* NominationsApp.swift in Sources */,
-				1BA8D9E82AE29B3B008FBB3F /* TextStyle+Styles.swift in Sources */,
-				1BA8D9E62AE29AF7008FBB3F /* FontName+Names.swift in Sources */,
-				1BA8D9CD2AE294B3008FBB3F /* FigmaShadow+Shadows.swift in Sources */,
-				258A2CE92AF5789A0067AAFC /* AreYouSureModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,6 +401,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1BA8D9E02AE29ACD008FBB3F /* XCRemoteSwiftPackageReference "cubefoundation-ios" */;
 			productName = CubeFoundationSwiftUI;
+		};
+		254397942AF6B89F00389169 /* NominationsKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NominationsKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

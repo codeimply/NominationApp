@@ -1,0 +1,12 @@
+//
+//  Config.xcconfig
+//  Nominations
+//
+//  Created by Wiktoria Wylecial on 04/11/2023.
+//  Copyright © 2023 3 Sided Cube (UK) Ltd. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BEARER_TOKEN = 8uHm3xpDyiyS7vcYDT3BQG8EmKcWp5T9n4HYyvkmdccc4163

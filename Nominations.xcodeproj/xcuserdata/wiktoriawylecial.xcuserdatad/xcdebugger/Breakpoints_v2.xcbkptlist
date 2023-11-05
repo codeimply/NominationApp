@@ -196,5 +196,163 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DCDBD8E0-F528-4FC3-8981-D494747161D9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nominations/Internal/NominationsAPI/NomineeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1072B90D-BAB5-47BC-9635-F65B3877B3A4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nominations/Internal/NominationsAPI/NomineeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "1072B90D-BAB5-47BC-9635-F65B3877B3A4 - ade1acf087f89feb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Nominations.NomineeViewModel.allNominees() -&gt; Swift.String"
+                  moduleName = "Nominations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wiktoriawylecial/Documents/projects/ios-developer-test-cube-academy/Nominations/Internal/NominationsAPI/NomineeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "472">
+               </Location>
+               <Location
+                  uuid = "1072B90D-BAB5-47BC-9635-F65B3877B3A4 - ade1acf087f89feb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Nominations.NomineeViewModel.allNominees() -&gt; Swift.String"
+                  moduleName = "Nominations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wiktoriawylecial/Documents/projects/ios-developer-test-cube-academy/Nominations/Internal/NominationsAPI/NomineeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "175">
+               </Location>
+               <Location
+                  uuid = "1072B90D-BAB5-47BC-9635-F65B3877B3A4 - c23af79ecb2d43bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Nominations.Nominee) -&gt; () in Nominations.NomineeViewModel.allNominees() -&gt; Swift.String"
+                  moduleName = "Nominations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wiktoriawylecial/Documents/projects/ios-developer-test-cube-academy/Nominations/Internal/NominationsAPI/NomineeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "51">
+               </Location>
+               <Location
+                  uuid = "1072B90D-BAB5-47BC-9635-F65B3877B3A4 - c23af79ecb2d43bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Nominations.Nominee) -&gt; () in Nominations.NomineeViewModel.allNominees() -&gt; Swift.String"
+                  moduleName = "Nominations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wiktoriawylecial/Documents/projects/ios-developer-test-cube-academy/Nominations/Internal/NominationsAPI/NomineeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "50">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7516C9EF-3E23-4BA8-9F11-82462B39978B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nominations/Internal/NominationsAPI/NomineeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "7516C9EF-3E23-4BA8-9F11-82462B39978B - c23af79ecb2d43c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Nominations.Nominee) -&gt; () in Nominations.NomineeViewModel.allNominees() -&gt; Swift.String"
+                  moduleName = "Nominations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wiktoriawylecial/Documents/projects/ios-developer-test-cube-academy/Nominations/Internal/NominationsAPI/NomineeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "63">
+               </Location>
+               <Location
+                  uuid = "7516C9EF-3E23-4BA8-9F11-82462B39978B - c23af79ecb2d43c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Nominations.Nominee) -&gt; () in Nominations.NomineeViewModel.allNominees() -&gt; Swift.String"
+                  moduleName = "Nominations"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wiktoriawylecial/Documents/projects/ios-developer-test-cube-academy/Nominations/Internal/NominationsAPI/NomineeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "62">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "592CF544-999D-49A3-B84D-D289F5DCCB70"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nominations/Internal/NominationsAPI/NomineeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

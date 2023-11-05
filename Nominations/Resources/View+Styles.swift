@@ -46,4 +46,12 @@ extension View {
             .multilineTextAlignment(.leading)
             .lineSpacing(5.0)
     }
+    
+    func customSecondDescriptionStyle() -> some View {
+        self
+            .font(Font.custom("Anonymous Pro", size: 16))
+            .foregroundColor(.black)
+            .multilineTextAlignment(.leading)
+            .lineSpacing(5.0)
+    }
 }

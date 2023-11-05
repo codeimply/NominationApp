@@ -42,11 +42,15 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
     @State private var pressed = false
     @State private var showSettings = false
     @State private var settingsDetent = PresentationDetent.medium
+    @State private var selectedFeedbackTitle = ""
+    @State private var selectedOptionNomineeId = ""
+    
+    @StateObject var fetched = NomineeManager()
     
     let characterLimit = 280
     
     // MARK: - Data
-    let options = ["Select Option", "David Jones", "Lorem Ipsum"]
+    let options = ["Select Option", "David Jones", "Lorem Ipsum"] // fetched nominee list to replace
     
     let radioButtonData = [
         RadioButtonViewModel(image: "VeryUnfairIcon", title: "Very Unfair"),
@@ -65,9 +69,9 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
     var body: some View {
         
         VStack(spacing: 0) {
-            
             /* Reused code implemented for the title */
             HeaderBarView(title: headerTitle)
+            
             ScrollView {
                 Image("NominationFormHeader")
                     .resizable()
@@ -95,6 +99,7 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
                                 
                                 if options.rawValue != "Select Option" {
                                     selectedOption = true
+//                                    selectedOptionNomineeId = fetched.nominees?.nomineeId
                                 }
                             }
                     }
@@ -153,6 +158,10 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
                      ForEach reduces the amount of code to create multiple buttons */
                     ForEach(radioButtonData) { data in
                         RadioButtonView(image: data.image, title: data.title)
+                        
+//                        if selectedFeedback {
+//                            selectedFeedbackTitle = data.title
+//                        }
                     }
                     .onTapGesture {
                         selectedFeedback = true
@@ -176,9 +185,7 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
         .overlay (
             ZStack {
                 /* created a component for custom button to reuse in other screens reducing the amount of code */
-                
                 HStack {
-                    
                     CustomButtonView(viewModel: backButtonViewModel, backgroundColor: .white, foregroundColor: .black, borderColor: pressed ? .cubePink : .black, frameWidth: 100, frameHeight: 48)
                         .padding(.trailing, 14)
                     
@@ -206,6 +213,9 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
                 viewModel.buttonAction()
             }
         }
+        .onAppear {
+            NomineeManager().getNominee()
+        }
     }
 }
 
@@ -219,6 +229,9 @@ private extension NominationFormView {
                               action: {
             buttonState()
             NominationFlowCoordinator.shared.submittedNomination = true
+            
+            /* create new nomination */
+//            NomineeManager().postNominee(nomineeId: fetched.nominees?.nomineeId, reason: $reasoning, process: selectedFeedbackTitle)
         })
     }
     

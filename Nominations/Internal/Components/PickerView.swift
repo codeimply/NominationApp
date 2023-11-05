@@ -15,6 +15,9 @@ struct PickerView: View {
     
     @Binding var activeSelectedOption: Bool
     @State var options: [String]
+//    @State var nomineeId: String // API properties for list of nominees
+//    @State var firstName: String
+//    @State var lastName: String
     @State private var selectedOption = "Select Option"
     
     var body: some View {

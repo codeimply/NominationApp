@@ -27,6 +27,8 @@
 		252143F02AF6E0A40097D3C5 /* NominationsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143EF2AF6E0A40097D3C5 /* NominationsHeaderView.swift */; };
 		252143F22AF6E0C60097D3C5 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143F12AF6E0C60097D3C5 /* PickerView.swift */; };
 		252143F42AF6E0E30097D3C5 /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143F32AF6E0E30097D3C5 /* RadioButtonView.swift */; };
+		252143F72AF6E6BA0097D3C5 /* Nominee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143F62AF6E6BA0097D3C5 /* Nominee.swift */; };
+		252143F92AF6EBD70097D3C5 /* NomineeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143F82AF6EBD70097D3C5 /* NomineeManager.swift */; };
 		2522DB4D2AF6D1EF004C3EAA /* NominationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2522DB4A2AF6D1EE004C3EAA /* NominationFormView.swift */; };
 		2522DB4E2AF6D1EF004C3EAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2522DB4B2AF6D1EF004C3EAA /* ContentView.swift */; };
 		2522DB4F2AF6D1EF004C3EAA /* NominationSubmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2522DB4C2AF6D1EF004C3EAA /* NominationSubmittedView.swift */; };
@@ -58,6 +60,16 @@
 		252143EF2AF6E0A40097D3C5 /* NominationsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationsHeaderView.swift; sourceTree = "<group>"; };
 		252143F12AF6E0C60097D3C5 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		252143F32AF6E0E30097D3C5 /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
+		252143F62AF6E6BA0097D3C5 /* Nominee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nominee.swift; sourceTree = "<group>"; };
+		252143F82AF6EBD70097D3C5 /* NomineeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomineeManager.swift; sourceTree = "<group>"; };
+		252143FB2AF6EFC00097D3C5 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		252144022AF81CE70097D3C5 /* AnonymousPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Bold.ttf"; sourceTree = "<group>"; };
+		252144032AF81CE70097D3C5 /* AnonymousPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Regular.ttf"; sourceTree = "<group>"; };
+		252144052AF81CE70097D3C5 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		252144062AF81CE70097D3C5 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		252144072AF81CE70097D3C5 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		252144082AF81CE70097D3C5 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		252144092AF81CE70097D3C5 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		2522DB4A2AF6D1EE004C3EAA /* NominationFormView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationFormView.swift; sourceTree = "<group>"; };
 		2522DB4B2AF6D1EF004C3EAA /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2522DB4C2AF6D1EF004C3EAA /* NominationSubmittedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NominationSubmittedView.swift; sourceTree = "<group>"; };
@@ -67,13 +79,6 @@
 		25CCFE882AF6DC72003E2CEC /* TextStyle+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextStyle+Styles.swift"; sourceTree = "<group>"; };
 		25CCFE892AF6DC72003E2CEC /* Defaults+Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Strings.swift"; sourceTree = "<group>"; };
 		25CCFE8A2AF6DC72003E2CEC /* FigmaShadow+Shadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FigmaShadow+Shadows.swift"; sourceTree = "<group>"; };
-		25CCFE912AF6DC97003E2CEC /* AnonymousPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Bold.ttf"; sourceTree = "<group>"; };
-		25CCFE922AF6DC97003E2CEC /* AnonymousPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AnonymousPro-Regular.ttf"; sourceTree = "<group>"; };
-		25CCFE942AF6DC97003E2CEC /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
-		25CCFE952AF6DC97003E2CEC /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
-		25CCFE962AF6DC97003E2CEC /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
-		25CCFE972AF6DC97003E2CEC /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		25CCFE982AF6DC97003E2CEC /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +114,7 @@
 		1BA8D9B72AE290D7008FBB3F /* Nominations */ = {
 			isa = PBXGroup;
 			children = (
+				252143FA2AF6EF910097D3C5 /* Config */,
 				2522DB482AF6D1D4004C3EAA /* External */,
 				25CCFE772AF6DB5B003E2CEC /* Internal */,
 				2522DB502AF6D1F5004C3EAA /* Resources */,
@@ -125,6 +131,53 @@
 				1BA8D9BF2AE290DA008FBB3F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		252143F52AF6E4500097D3C5 /* NominationsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				252143F62AF6E6BA0097D3C5 /* Nominee.swift */,
+				252143F82AF6EBD70097D3C5 /* NomineeManager.swift */,
+			);
+			path = NominationsAPI;
+			sourceTree = "<group>";
+		};
+		252143FA2AF6EF910097D3C5 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				252143FB2AF6EFC00097D3C5 /* Config.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		252144002AF81CE70097D3C5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				252144012AF81CE70097D3C5 /* Anonymous Pro */,
+				252144042AF81CE70097D3C5 /* Poppins */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		252144012AF81CE70097D3C5 /* Anonymous Pro */ = {
+			isa = PBXGroup;
+			children = (
+				252144022AF81CE70097D3C5 /* AnonymousPro-Bold.ttf */,
+				252144032AF81CE70097D3C5 /* AnonymousPro-Regular.ttf */,
+			);
+			path = "Anonymous Pro";
+			sourceTree = "<group>";
+		};
+		252144042AF81CE70097D3C5 /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				252144052AF81CE70097D3C5 /* Poppins-Light.ttf */,
+				252144062AF81CE70097D3C5 /* Poppins-Medium.ttf */,
+				252144072AF81CE70097D3C5 /* Poppins-Regular.ttf */,
+				252144082AF81CE70097D3C5 /* Poppins-Bold.ttf */,
+				252144092AF81CE70097D3C5 /* Poppins-SemiBold.ttf */,
+			);
+			path = Poppins;
 			sourceTree = "<group>";
 		};
 		2522DB482AF6D1D4004C3EAA /* External */ = {
@@ -148,13 +201,14 @@
 		2522DB502AF6D1F5004C3EAA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				25AF2D072AF81F3300E764AA /* New Group */,
+				25CCFE852AF6DC5A003E2CEC /* View+Styles.swift */,
 				25CCFE892AF6DC72003E2CEC /* Defaults+Strings.swift */,
 				25CCFE8A2AF6DC72003E2CEC /* FigmaShadow+Shadows.swift */,
 				25CCFE872AF6DC72003E2CEC /* FontName+Names.swift */,
 				25CCFE882AF6DC72003E2CEC /* TextStyle+Styles.swift */,
 				2522DB542AF6D1F5004C3EAA /* Assets.xcassets */,
-				25CCFE852AF6DC5A003E2CEC /* View+Styles.swift */,
-				25CCFE8F2AF6DC97003E2CEC /* Fonts */,
+				252144002AF81CE70097D3C5 /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -166,9 +220,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		25AF2D072AF81F3300E764AA /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		25CCFE772AF6DB5B003E2CEC /* Internal */ = {
 			isa = PBXGroup;
 			children = (
+				252143F52AF6E4500097D3C5 /* NominationsAPI */,
 				25CCFE832AF6DBD3003E2CEC /* Protocols */,
 				25CCFE7C2AF6DBBA003E2CEC /* ViewModels */,
 				25CCFE7B2AF6DBA5003E2CEC /* Views */,
@@ -235,36 +297,6 @@
 				252143D72AF6DEAB0097D3C5 /* NominationViewModelProtocol.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		25CCFE8F2AF6DC97003E2CEC /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				25CCFE902AF6DC97003E2CEC /* Anonymous Pro */,
-				25CCFE932AF6DC97003E2CEC /* Poppins */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		25CCFE902AF6DC97003E2CEC /* Anonymous Pro */ = {
-			isa = PBXGroup;
-			children = (
-				25CCFE912AF6DC97003E2CEC /* AnonymousPro-Bold.ttf */,
-				25CCFE922AF6DC97003E2CEC /* AnonymousPro-Regular.ttf */,
-			);
-			path = "Anonymous Pro";
-			sourceTree = "<group>";
-		};
-		25CCFE932AF6DC97003E2CEC /* Poppins */ = {
-			isa = PBXGroup;
-			children = (
-				25CCFE942AF6DC97003E2CEC /* Poppins-Light.ttf */,
-				25CCFE952AF6DC97003E2CEC /* Poppins-Medium.ttf */,
-				25CCFE962AF6DC97003E2CEC /* Poppins-Regular.ttf */,
-				25CCFE972AF6DC97003E2CEC /* Poppins-Bold.ttf */,
-				25CCFE982AF6DC97003E2CEC /* Poppins-SemiBold.ttf */,
-			);
-			path = Poppins;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				252143DA2AF6DF1B0097D3C5 /* ActionButtonViewModel.swift in Sources */,
+				252143F72AF6E6BA0097D3C5 /* Nominee.swift in Sources */,
 				252143D22AF6DD9B0097D3C5 /* ActionButtonProtocol.swift in Sources */,
 				252143E22AF6DF940097D3C5 /* NominationFlowCoordinator.swift in Sources */,
 				252143DC2AF6DF330097D3C5 /*  NominationViewModel.swift in Sources */,
@@ -353,6 +386,7 @@
 				252143D82AF6DEAB0097D3C5 /* NominationViewModelProtocol.swift in Sources */,
 				252143EC2AF6E0730097D3C5 /* EmptyStateView.swift in Sources */,
 				25CCFE8B2AF6DC72003E2CEC /* FigmaShadow+Shadows.swift in Sources */,
+				252143F92AF6EBD70097D3C5 /* NomineeManager.swift in Sources */,
 				252143E62AF6DFEC0097D3C5 /* NominationType.swift in Sources */,
 				252143EE2AF6E0880097D3C5 /* HeaderBarView.swift in Sources */,
 				252143E42AF6DFD40097D3C5 /* NominationStatus.swift in Sources */,

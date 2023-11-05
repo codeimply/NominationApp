@@ -17,6 +17,8 @@ struct ContentView<ViewModel: NominationViewModelProtocol>: View {
     
     @State private var pressed = false
     
+    @StateObject var fetched = NomineeManager()
+    
     var body: some View {
         
         VStack(spacing: 0) {
@@ -26,7 +28,27 @@ struct ContentView<ViewModel: NominationViewModelProtocol>: View {
             
             ScrollView {
                 
+//                if fetched.nominees?.nomineeId.isEmpty {
+//                    EmptyView()
+//                } else {
+//
+//                }
                 
+                
+                HStack {
+                    
+                    VStack(alignment: .leading) {
+                        
+                        Text("David Jones")
+                            .customSecondDescriptionStyle()
+                        
+                        Text("Always goes above and...")
+                            .customDescriptionStyle()
+                        
+                    }
+                    .frame(width: 300, alignment: .leading)
+                }
+                .customTabStyle()
                 
             }
         }
@@ -44,7 +66,9 @@ struct ContentView<ViewModel: NominationViewModelProtocol>: View {
                 viewModel.buttonAction()
             }
         }
-        
+        .onAppear {
+            NomineeManager().getNominee()
+        }
     }
 }
 
@@ -64,14 +88,13 @@ private extension ContentView {
 
 /* button state - if pressed change colour and return to default */
 private extension ContentView {
-
+    
     func buttonState() {
         pressed = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             pressed = false
         }
     }
-    
 }
 
 

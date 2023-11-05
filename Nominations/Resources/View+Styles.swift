@@ -47,9 +47,9 @@ extension View {
             .lineSpacing(5.0)
     }
     
-    func customSecondDescriptionStyle() -> some View {
+    func customNameStyle() -> some View {
         self
-            .font(Font.custom("Anonymous Pro", size: 16))
+            .font(Font.custom("AnonymousPro-Bold", size: 16))
             .foregroundColor(.black)
             .multilineTextAlignment(.leading)
             .lineSpacing(5.0)

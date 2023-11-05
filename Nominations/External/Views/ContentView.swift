@@ -26,30 +26,30 @@ struct ContentView<ViewModel: NominationViewModelProtocol>: View {
             /* moved the NotinationsHeaderView() out of ScrollView to make it Sticky */
             NominationsHeaderView()
             
-            ScrollView {
+            ScrollView(.vertical) {
                 
 //                if fetched.nominees?.nomineeId.isEmpty {
-//                    EmptyView()
-//                } else {
-//
-//                }
-                
-                
-                HStack {
-                    
-                    VStack(alignment: .leading) {
-                        
-                        Text("David Jones")
-                            .customSecondDescriptionStyle()
-                        
-                        Text("Always goes above and...")
-                            .customDescriptionStyle()
-                        
+                    VStack {
+                        Spacer(minLength: 90)
+                        EmptyStateView()
                     }
-                    .frame(width: 300, alignment: .leading)
-                }
-                .customTabStyle()
-                
+                    
+//                } else {
+//                    HStack() {
+//                        VStack(alignment: .leading) {
+//                            
+//                            Text("David Jones")
+//                                .customNameStyle()
+//                                .padding(.bottom, 6)
+//                            
+//                            Text("Always goes above and...")
+//                                .customDescriptionStyle()
+//                        }
+//                        .frame(width: 300, alignment: .leading)
+//                    }
+//                    .customTabStyle()
+//                    
+//                }
             }
         }
         .background(.cubeLightGrey)

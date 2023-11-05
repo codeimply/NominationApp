@@ -32,6 +32,13 @@
 		2522DB4D2AF6D1EF004C3EAA /* NominationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2522DB4A2AF6D1EE004C3EAA /* NominationFormView.swift */; };
 		2522DB4E2AF6D1EF004C3EAA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2522DB4B2AF6D1EF004C3EAA /* ContentView.swift */; };
 		2522DB4F2AF6D1EF004C3EAA /* NominationSubmittedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2522DB4C2AF6D1EF004C3EAA /* NominationSubmittedView.swift */; };
+		25AF2D0A2AF821F700E764AA /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 252144052AF81CE70097D3C5 /* Poppins-Light.ttf */; };
+		25AF2D0B2AF821FA00E764AA /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 252144062AF81CE70097D3C5 /* Poppins-Medium.ttf */; };
+		25AF2D0C2AF821FD00E764AA /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 252144072AF81CE70097D3C5 /* Poppins-Regular.ttf */; };
+		25AF2D0D2AF821FF00E764AA /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 252144082AF81CE70097D3C5 /* Poppins-Bold.ttf */; };
+		25AF2D0E2AF8220200E764AA /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 252144092AF81CE70097D3C5 /* Poppins-SemiBold.ttf */; };
+		25AF2D0F2AF8220400E764AA /* AnonymousPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 252144022AF81CE70097D3C5 /* AnonymousPro-Bold.ttf */; };
+		25AF2D102AF8220700E764AA /* AnonymousPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 252144032AF81CE70097D3C5 /* AnonymousPro-Regular.ttf */; };
 		25CCFE862AF6DC5A003E2CEC /* View+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CCFE852AF6DC5A003E2CEC /* View+Styles.swift */; };
 		25CCFE8B2AF6DC72003E2CEC /* FigmaShadow+Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CCFE8A2AF6DC72003E2CEC /* FigmaShadow+Shadows.swift */; };
 		25CCFE8C2AF6DC72003E2CEC /* FontName+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CCFE872AF6DC72003E2CEC /* FontName+Names.swift */; };
@@ -150,36 +157,6 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		252144002AF81CE70097D3C5 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				252144012AF81CE70097D3C5 /* Anonymous Pro */,
-				252144042AF81CE70097D3C5 /* Poppins */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		252144012AF81CE70097D3C5 /* Anonymous Pro */ = {
-			isa = PBXGroup;
-			children = (
-				252144022AF81CE70097D3C5 /* AnonymousPro-Bold.ttf */,
-				252144032AF81CE70097D3C5 /* AnonymousPro-Regular.ttf */,
-			);
-			path = "Anonymous Pro";
-			sourceTree = "<group>";
-		};
-		252144042AF81CE70097D3C5 /* Poppins */ = {
-			isa = PBXGroup;
-			children = (
-				252144052AF81CE70097D3C5 /* Poppins-Light.ttf */,
-				252144062AF81CE70097D3C5 /* Poppins-Medium.ttf */,
-				252144072AF81CE70097D3C5 /* Poppins-Regular.ttf */,
-				252144082AF81CE70097D3C5 /* Poppins-Bold.ttf */,
-				252144092AF81CE70097D3C5 /* Poppins-SemiBold.ttf */,
-			);
-			path = Poppins;
-			sourceTree = "<group>";
-		};
 		2522DB482AF6D1D4004C3EAA /* External */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,14 +178,13 @@
 		2522DB502AF6D1F5004C3EAA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				25AF2D072AF81F3300E764AA /* New Group */,
+				25AF2D082AF81F9C00E764AA /* Fonts */,
 				25CCFE852AF6DC5A003E2CEC /* View+Styles.swift */,
 				25CCFE892AF6DC72003E2CEC /* Defaults+Strings.swift */,
 				25CCFE8A2AF6DC72003E2CEC /* FigmaShadow+Shadows.swift */,
 				25CCFE872AF6DC72003E2CEC /* FontName+Names.swift */,
 				25CCFE882AF6DC72003E2CEC /* TextStyle+Styles.swift */,
 				2522DB542AF6D1F5004C3EAA /* Assets.xcassets */,
-				252144002AF81CE70097D3C5 /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -220,11 +196,34 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		25AF2D072AF81F3300E764AA /* New Group */ = {
+		25AF2D072AF81F3300E764AA /* Anonymous Pro */ = {
 			isa = PBXGroup;
 			children = (
+				252144022AF81CE70097D3C5 /* AnonymousPro-Bold.ttf */,
+				252144032AF81CE70097D3C5 /* AnonymousPro-Regular.ttf */,
 			);
-			path = "New Group";
+			path = "Anonymous Pro";
+			sourceTree = "<group>";
+		};
+		25AF2D082AF81F9C00E764AA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				25AF2D092AF81FC700E764AA /* Poppins */,
+				25AF2D072AF81F3300E764AA /* Anonymous Pro */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		25AF2D092AF81FC700E764AA /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				252144052AF81CE70097D3C5 /* Poppins-Light.ttf */,
+				252144062AF81CE70097D3C5 /* Poppins-Medium.ttf */,
+				252144072AF81CE70097D3C5 /* Poppins-Regular.ttf */,
+				252144082AF81CE70097D3C5 /* Poppins-Bold.ttf */,
+				252144092AF81CE70097D3C5 /* Poppins-SemiBold.ttf */,
+			);
+			path = Poppins;
 			sourceTree = "<group>";
 		};
 		25CCFE772AF6DB5B003E2CEC /* Internal */ = {
@@ -365,7 +364,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25AF2D0B2AF821FA00E764AA /* Poppins-Medium.ttf in Resources */,
 				1BA8D9C02AE290DA008FBB3F /* Preview Assets.xcassets in Resources */,
+				25AF2D0D2AF821FF00E764AA /* Poppins-Bold.ttf in Resources */,
+				25AF2D0E2AF8220200E764AA /* Poppins-SemiBold.ttf in Resources */,
+				25AF2D0A2AF821F700E764AA /* Poppins-Light.ttf in Resources */,
+				25AF2D102AF8220700E764AA /* AnonymousPro-Regular.ttf in Resources */,
+				25AF2D0C2AF821FD00E764AA /* Poppins-Regular.ttf in Resources */,
+				25AF2D0F2AF8220400E764AA /* AnonymousPro-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,7 +540,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Nominations/Preview Content\"";
 				DEVELOPMENT_TEAM = 25H7BM6YWK;
 				ENABLE_PREVIEWS = YES;
@@ -567,7 +573,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Nominations/Preview Content\"";
 				DEVELOPMENT_TEAM = 25H7BM6YWK;
 				ENABLE_PREVIEWS = YES;

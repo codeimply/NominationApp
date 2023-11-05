@@ -61,7 +61,7 @@ struct NominationSubmittedView<ViewModel: NominationViewModelProtocol>: View {
                     CustomButtonView(viewModel: createNewNominationButtonViewModel, backgroundColor: pressed ? .cubeDarkGrey : .black, foregroundColor: .white, borderColor: .black, frameWidth: 340, frameHeight: 48)
                         .padding(.bottom, 6)
                     
-                    CustomButtonView(viewModel: createNewNominationButtonViewModel, backgroundColor: .white, foregroundColor: .black, borderColor: pressed ? .cubePink : .black, frameWidth: 340, frameHeight: 48)
+                    CustomButtonView(viewModel: backToHomeButtonViewModel, backgroundColor: .white, foregroundColor: .black, borderColor: pressed ? .cubePink : .black, frameWidth: 340, frameHeight: 48)
                 }
             }
                 .customLargeTabStyle() // custom modifiers

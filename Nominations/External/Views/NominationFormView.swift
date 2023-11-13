@@ -45,7 +45,7 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
     @State private var selectedFeedbackTitle = ""
     @State private var selectedOptionNomineeId = ""
     
-    @StateObject var fetched = NomineeManager()
+//    @StateObject var apiViewModel: NomineeManager
     
     let characterLimit = 280
     
@@ -214,7 +214,7 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
             }
         }
         .onAppear {
-            NomineeManager().getNominee()
+//            apiViewModel.getNominee()
         }
     }
 }

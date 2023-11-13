@@ -17,7 +17,7 @@ struct ContentView<ViewModel: NominationViewModelProtocol>: View {
     
     @State private var pressed = false
     
-    @StateObject var fetched = NomineeManager()
+    @StateObject var apiViewModel: NomineeManager
     
     var body: some View {
         
@@ -28,28 +28,22 @@ struct ContentView<ViewModel: NominationViewModelProtocol>: View {
             
             ScrollView(.vertical) {
                 
-//                if fetched.nominees?.nomineeId.isEmpty {
-                    VStack {
-                        Spacer(minLength: 90)
-                        EmptyStateView()
+                ForEach(apiViewModel.nominee) { nominee in
+                    HStack() {
+                        VStack(alignment: .leading) {
+                            
+                            Text("\(nominee.firstName) \(nominee.lastName)")
+                                .customNameStyle()
+                                .padding(.bottom, 6)
+                            
+                            Text("Always goes above and...")
+                                .customDescriptionStyle()
+                        }
+                        .frame(width: 300, alignment: .leading)
                     }
+                    .customTabStyle()
                     
-//                } else {
-//                    HStack() {
-//                        VStack(alignment: .leading) {
-//                            
-//                            Text("David Jones")
-//                                .customNameStyle()
-//                                .padding(.bottom, 6)
-//                            
-//                            Text("Always goes above and...")
-//                                .customDescriptionStyle()
-//                        }
-//                        .frame(width: 300, alignment: .leading)
-//                    }
-//                    .customTabStyle()
-//                    
-//                }
+                }
             }
         }
         .background(.cubeLightGrey)
@@ -67,7 +61,7 @@ struct ContentView<ViewModel: NominationViewModelProtocol>: View {
             }
         }
         .onAppear {
-            NomineeManager().getNominee()
+            apiViewModel.getNominee()
         }
     }
 }

@@ -16,13 +16,16 @@ struct NominationFlow: View {
     private let coordinator: NominationFlowCoordinator
     private let pages: [NominationType]
     
+    let apiViewModel: NomineeManager
+    
     @State private var currentPage: NominationType
     @State var screenActionHasOccurred = false
     @State var tabSelection = 0
     
-    init(pages: [NominationType], coordinator: NominationFlowCoordinator = NominationFlowCoordinator.shared) {
+    init(pages: [NominationType], coordinator: NominationFlowCoordinator = NominationFlowCoordinator.shared, apiViewModel: NomineeManager = NomineeManager()) {
         self.pages = pages
         self.coordinator = coordinator
+        self.apiViewModel = apiViewModel
         self._currentPage = .init(initialValue: coordinator.currentPage)
     }
     
@@ -31,7 +34,7 @@ struct NominationFlow: View {
             TabView(selection: $tabSelection) {
                 ForEach(pages, id: \.self) { page in
                     if page == currentPage {
-                        page.view(coordinator: coordinator, action: showNextPage, screenActionHasOccurred: $screenActionHasOccurred)
+                        page.view(coordinator: coordinator, action: showNextPage, screenActionHasOccurred: $screenActionHasOccurred, apiViewModel: apiViewModel)
                             .transition(AnyTransition.asymmetric(
                                 insertion: .move(edge: .trailing),
                                 removal: .move(edge: .leading))

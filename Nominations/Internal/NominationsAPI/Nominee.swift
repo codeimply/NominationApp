@@ -8,24 +8,75 @@
 
 import Foundation
 
-struct NomineeData: Codable {
-    let data: [Nominee]
+struct Nominee: Codable {
+    let data: [NomineeData]
 }
 
-struct Nominee: Codable {
-    let nomineeId: String
+struct NomineeData: Codable, Identifiable {
+    let id = UUID()
+    let nomineeID: String
     let firstName: String
     let lastName: String
     
-    enum CodingKeys: String, CodingKey {
-        case nomineeId = "nominee_id"
+    private enum CodingKeys: String, CodingKey {
+        case nomineeID = "nominee_id"
         case firstName = "first_name"
         case lastName = "last_name"
     }
 }
 
-struct CreateNominee: Encodable {
-    let nomineeId: String
-    let reason: String
-    let process: String
-}
+
+
+//
+//struct Response: Decodable, Identifiable {
+//
+//    private enum CodingKeys: String, CodingKey { case message, status }
+//     let id = UUID()
+//
+//    let dogs: [Dog]
+//    let status: String
+//
+//    init(from decoder: Decoder) throws {
+//        let container = try decoder.container(keyedBy: CodingKeys.self)
+//        status = try container.decode(String.self, forKey: .status)
+//        let message = try container.decode([String:[String]].self, forKey: .message)
+//        dogs = message.map(Dog.init).sorted{$0.name < $1.name}
+//    }
+//}
+
+//    enum CodingKeys: String, CodingKey {
+//        case nomineeId = "nominee_id"
+//        case firstName = "first_name"
+//        case last_name = "last_name"
+//    }
+//}
+
+//extension Nominee {
+//    init?(json: [String: Any]) {
+//        guard let datasJSON = json["data"] as? [String]
+//
+//        else {
+//            return nil
+//        }
+//
+//        var datas: Set<Datas> = []
+//            for string in datasJSON {
+//                guard let data = Datas(rawValue: string) else {
+//                    return nil
+//                }
+//
+//                datas.insert(data)
+//            }
+//
+//        self.datas = datas
+//    }
+//}
+
+
+
+//
+//struct CreateNominee: Encodable {
+//    let nomineeId: String
+//    let reason: String
+//    let process: String
+//}

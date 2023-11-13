@@ -32,12 +32,12 @@ extension NominationType {
     }
     
     @ViewBuilder
-    func view(coordinator: NominationFlowCoordinator, action: @escaping () -> Void, screenActionHasOccurred: Binding<Bool>) -> some View {
+    func view(coordinator: NominationFlowCoordinator, action: @escaping () -> Void, screenActionHasOccurred: Binding<Bool>, apiViewModel: NomineeManager) -> some View {
         switch self {
             
         case .home:
             ContentView(viewModel: viewModel(action: action),
-                        screenActionHasOccurred: screenActionHasOccurred)
+                        screenActionHasOccurred: screenActionHasOccurred, apiViewModel: apiViewModel)
             
         case .createNomination:
             NominationFormView(viewModel: viewModel(action: action),

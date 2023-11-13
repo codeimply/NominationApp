@@ -10,7 +10,7 @@ import SwiftUI
 
 class NomineeManager: ObservableObject {
     
-    @Published var nominees: Nominee?
+    @Published var nominee: [NomineeData] = []
     
     func getNominee() {
         
@@ -19,45 +19,49 @@ class NomineeManager: ObservableObject {
         
         var request = URLRequest(url: url)
         request.addValue("Bearer \(authToken)", forHTTPHeaderField: "Authorization")
-             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-             request.addValue("application/json", forHTTPHeaderField: "Accept")
-             request.httpMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.httpMethod = "GET"
         
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-                guard let data = data else { return }
-                
-                print(String(data: data, encoding: .utf8)!)
-                do {
-                    //Decode dataResponse received from a network request
-                    let decoder = JSONDecoder()
-                    let nominees = try decoder.decode(NomineeData.self, from: data) //Decode JSON Response Data
-                } catch let parsingError {
-                    print("Error", parsingError)
-                }
+        let task = URLSession.shared.dataTask(with: request) { data, _, error in
+            guard let data = data, error == nil else {
+                return
             }
-            task.resume()
+            do {
+                //Decode dataResponse received from a network request
+                let decoder = JSONDecoder()
+                let decoded = try decoder.decode(Nominee.self, from: data)
+                self.nominee = decoded.data
+                
+                print(self.nominee.first)
+            
+            } catch let parsingError {
+                print("Error", parsingError)
+            }
+        }
+        task.resume()
     }
     
     func postNominee(nomineeId: String, reason: String, process: String) {
         
         let authToken =  "8uHm3xpDyiyS7vcYDT3BQG8EmKcWp5T9n4HYyvkmdccc4163"
         let url =  URL(string: "https://cube-academy-api.cubeapis.com/api/nomination")!
-
+        
         // prepare json data
         let json: [String: Any] = ["nominee_id": nomineeId, "reason": reason, "process": process]
-
+        
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
-
+        
         // create post request
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-
+        
         // insert json data to the request
         request.httpBody = jsonData
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue( "Bearer \(authToken)", forHTTPHeaderField: "Authorization")
-
+        
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 print(error?.localizedDescription ?? "No data")

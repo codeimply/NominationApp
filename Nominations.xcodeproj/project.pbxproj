@@ -15,7 +15,6 @@
 		252143D82AF6DEAB0097D3C5 /* NominationViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143D72AF6DEAB0097D3C5 /* NominationViewModelProtocol.swift */; };
 		252143DA2AF6DF1B0097D3C5 /* ActionButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143D92AF6DF1B0097D3C5 /* ActionButtonViewModel.swift */; };
 		252143DC2AF6DF330097D3C5 /*  NominationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143DB2AF6DF330097D3C5 /*  NominationViewModel.swift */; };
-		252143DE2AF6DF4B0097D3C5 /* RadioButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143DD2AF6DF4B0097D3C5 /* RadioButtonViewModel.swift */; };
 		252143E02AF6DF6E0097D3C5 /* NominationFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143DF2AF6DF6E0097D3C5 /* NominationFlow.swift */; };
 		252143E22AF6DF940097D3C5 /* NominationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143E12AF6DF940097D3C5 /* NominationFlowCoordinator.swift */; };
 		252143E42AF6DFD40097D3C5 /* NominationStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143E32AF6DFD40097D3C5 /* NominationStatus.swift */; };
@@ -25,7 +24,7 @@
 		252143EC2AF6E0730097D3C5 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143EB2AF6E0730097D3C5 /* EmptyStateView.swift */; };
 		252143EE2AF6E0880097D3C5 /* HeaderBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143ED2AF6E0880097D3C5 /* HeaderBarView.swift */; };
 		252143F02AF6E0A40097D3C5 /* NominationsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143EF2AF6E0A40097D3C5 /* NominationsHeaderView.swift */; };
-		252143F22AF6E0C60097D3C5 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143F12AF6E0C60097D3C5 /* PickerView.swift */; };
+		252143F22AF6E0C60097D3C5 /* CustomPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143F12AF6E0C60097D3C5 /* CustomPickerView.swift */; };
 		252143F42AF6E0E30097D3C5 /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143F32AF6E0E30097D3C5 /* RadioButtonView.swift */; };
 		252143F72AF6E6BA0097D3C5 /* Nominee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143F62AF6E6BA0097D3C5 /* Nominee.swift */; };
 		252143F92AF6EBD70097D3C5 /* NomineeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252143F82AF6EBD70097D3C5 /* NomineeManager.swift */; };
@@ -44,6 +43,8 @@
 		25CCFE8C2AF6DC72003E2CEC /* FontName+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CCFE872AF6DC72003E2CEC /* FontName+Names.swift */; };
 		25CCFE8D2AF6DC72003E2CEC /* TextStyle+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CCFE882AF6DC72003E2CEC /* TextStyle+Styles.swift */; };
 		25CCFE8E2AF6DC72003E2CEC /* Defaults+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CCFE892AF6DC72003E2CEC /* Defaults+Strings.swift */; };
+		25D995AA2BACE64000B5215C /* Nominees.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D995A92BACE64000B5215C /* Nominees.swift */; };
+		25D995AC2BAE4DDC00B5215C /* RadioButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D995AB2BAE4DDC00B5215C /* RadioButtonType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +56,6 @@
 		252143D72AF6DEAB0097D3C5 /* NominationViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationViewModelProtocol.swift; sourceTree = "<group>"; };
 		252143D92AF6DF1B0097D3C5 /* ActionButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonViewModel.swift; sourceTree = "<group>"; };
 		252143DB2AF6DF330097D3C5 /*  NominationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NominationViewModel.swift"; sourceTree = "<group>"; };
-		252143DD2AF6DF4B0097D3C5 /* RadioButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonViewModel.swift; sourceTree = "<group>"; };
 		252143DF2AF6DF6E0097D3C5 /* NominationFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationFlow.swift; sourceTree = "<group>"; };
 		252143E12AF6DF940097D3C5 /* NominationFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationFlowCoordinator.swift; sourceTree = "<group>"; };
 		252143E32AF6DFD40097D3C5 /* NominationStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationStatus.swift; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 		252143EB2AF6E0730097D3C5 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		252143ED2AF6E0880097D3C5 /* HeaderBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBarView.swift; sourceTree = "<group>"; };
 		252143EF2AF6E0A40097D3C5 /* NominationsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominationsHeaderView.swift; sourceTree = "<group>"; };
-		252143F12AF6E0C60097D3C5 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		252143F12AF6E0C60097D3C5 /* CustomPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPickerView.swift; sourceTree = "<group>"; };
 		252143F32AF6E0E30097D3C5 /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
 		252143F62AF6E6BA0097D3C5 /* Nominee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nominee.swift; sourceTree = "<group>"; };
 		252143F82AF6EBD70097D3C5 /* NomineeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomineeManager.swift; sourceTree = "<group>"; };
@@ -86,6 +86,8 @@
 		25CCFE882AF6DC72003E2CEC /* TextStyle+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextStyle+Styles.swift"; sourceTree = "<group>"; };
 		25CCFE892AF6DC72003E2CEC /* Defaults+Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults+Strings.swift"; sourceTree = "<group>"; };
 		25CCFE8A2AF6DC72003E2CEC /* FigmaShadow+Shadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FigmaShadow+Shadows.swift"; sourceTree = "<group>"; };
+		25D995A92BACE64000B5215C /* Nominees.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nominees.swift; sourceTree = "<group>"; };
+		25D995AB2BAE4DDC00B5215C /* RadioButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				252143F62AF6E6BA0097D3C5 /* Nominee.swift */,
+				25D995A92BACE64000B5215C /* Nominees.swift */,
 				252143F82AF6EBD70097D3C5 /* NomineeManager.swift */,
 			);
 			path = NominationsAPI;
@@ -245,6 +248,7 @@
 			children = (
 				252143E32AF6DFD40097D3C5 /* NominationStatus.swift */,
 				252143E52AF6DFEC0097D3C5 /* NominationType.swift */,
+				25D995AB2BAE4DDC00B5215C /* RadioButtonType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -265,8 +269,8 @@
 				252143EB2AF6E0730097D3C5 /* EmptyStateView.swift */,
 				252143ED2AF6E0880097D3C5 /* HeaderBarView.swift */,
 				252143EF2AF6E0A40097D3C5 /* NominationsHeaderView.swift */,
-				252143F12AF6E0C60097D3C5 /* PickerView.swift */,
 				252143F32AF6E0E30097D3C5 /* RadioButtonView.swift */,
+				252143F12AF6E0C60097D3C5 /* CustomPickerView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -284,7 +288,6 @@
 			children = (
 				252143D92AF6DF1B0097D3C5 /* ActionButtonViewModel.swift */,
 				252143DB2AF6DF330097D3C5 /*  NominationViewModel.swift */,
-				252143DD2AF6DF4B0097D3C5 /* RadioButtonViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				252143DC2AF6DF330097D3C5 /*  NominationViewModel.swift in Sources */,
 				2522DB4F2AF6D1EF004C3EAA /* NominationSubmittedView.swift in Sources */,
 				252143F02AF6E0A40097D3C5 /* NominationsHeaderView.swift in Sources */,
+				25D995AA2BACE64000B5215C /* Nominees.swift in Sources */,
 				252143D82AF6DEAB0097D3C5 /* NominationViewModelProtocol.swift in Sources */,
 				252143EC2AF6E0730097D3C5 /* EmptyStateView.swift in Sources */,
 				25CCFE8B2AF6DC72003E2CEC /* FigmaShadow+Shadows.swift in Sources */,
@@ -404,9 +408,9 @@
 				25CCFE8D2AF6DC72003E2CEC /* TextStyle+Styles.swift in Sources */,
 				252143EA2AF6E05A0097D3C5 /* CustomButtonView.swift in Sources */,
 				252143F42AF6E0E30097D3C5 /* RadioButtonView.swift in Sources */,
-				252143DE2AF6DF4B0097D3C5 /* RadioButtonViewModel.swift in Sources */,
-				252143F22AF6E0C60097D3C5 /* PickerView.swift in Sources */,
+				252143F22AF6E0C60097D3C5 /* CustomPickerView.swift in Sources */,
 				1BA8D9B92AE290D7008FBB3F /* NominationsApp.swift in Sources */,
+				25D995AC2BAE4DDC00B5215C /* RadioButtonType.swift in Sources */,
 				25CCFE862AF6DC5A003E2CEC /* View+Styles.swift in Sources */,
 				2522DB4E2AF6D1EF004C3EAA /* ContentView.swift in Sources */,
 			);

@@ -8,12 +8,14 @@
 
 import Combine
 import SwiftUI
+import Foundation
 
 struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
     
     @Environment(\.scenePhase) var scenePhase
     
     @ObservedObject var viewModel: ViewModel
+    @ObservedObject var apiViewModel = NomineeManager()
     @ObservedObject var nominationFlowCooridnator: NominationFlowCoordinator
     
     @Binding var screenActionHasOccurred: Bool
@@ -45,24 +47,14 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
     @State private var selectedFeedbackTitle = ""
     @State private var selectedOptionNomineeId = ""
     
-//    @StateObject var apiViewModel: NomineeManager
-    
     let characterLimit = 280
     
-    // MARK: - Data
-    let options = ["Select Option", "David Jones", "Lorem Ipsum"] // fetched nominee list to replace
+    @State var option = ""
     
-    let radioButtonData = [
-        RadioButtonViewModel(image: "VeryUnfairIcon", title: "Very Unfair"),
-        RadioButtonViewModel(image: "FairIcon", title: "Fair"),
-        RadioButtonViewModel(image: "NotSureIcon", title: "Not Sure"),
-        RadioButtonViewModel(image: "FairHappyIcon", title: "Fair"),
-        RadioButtonViewModel(image: "VeryFairHappyIcon", title: "Very Fair")
-    ]
-    
-    init(viewModel: ViewModel, screenActionHasOccurred: Binding<Bool>) {
+    init(viewModel: ViewModel, screenActionHasOccurred: Binding<Bool>, apiViewModel: NomineeManager) {
         self.viewModel = viewModel
         self._screenActionHasOccurred = screenActionHasOccurred
+        self.apiViewModel = apiViewModel
         nominationFlowCooridnator = NominationFlowCoordinator.shared
     }
     
@@ -93,15 +85,17 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
                             .font(Font.custom("Poppins-Bold", size: 16))
                         
                         /* Ability to customise and reuse */
-                        PickerView(activeSelectedOption: $activeSelectedOption, options: options)
-                            .onTapGesture {
-                                activeSelectedOption = true
-                                
-                                if options.rawValue != "Select Option" {
-                                    selectedOption = true
-//                                    selectedOptionNomineeId = fetched.nominees?.nomineeId
-                                }
-                            }
+//                        CustomPickerView(selection: option)
+//                        {
+//                            ForEach(apiViewModel.nominee, id: \.nomineeID) {
+//                                
+//                                option = "\($0.firstName) \($0.lastName)"
+//        
+//                                         }
+//                        }
+                    
+                        
+                           
                     }
                     .padding(.top, 34)
                     
@@ -156,12 +150,8 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
                     
                     /* Ability to customise and reuse
                      ForEach reduces the amount of code to create multiple buttons */
-                    ForEach(radioButtonData) { data in
-                        RadioButtonView(image: data.image, title: data.title)
-                        
-//                        if selectedFeedback {
-//                            selectedFeedbackTitle = data.title
-//                        }
+                    ForEach(RadioButtonType.fullRadioButtons) { data in
+                        RadioButtonView(image: data.images, title: data.title)
                     }
                     .onTapGesture {
                         selectedFeedback = true
@@ -214,7 +204,9 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
             }
         }
         .onAppear {
-//            apiViewModel.getNominee()
+            apiViewModel.retrieveNominees()
+            
+            arrays()
         }
     }
 }
@@ -231,7 +223,7 @@ private extension NominationFormView {
             NominationFlowCoordinator.shared.submittedNomination = true
             
             /* create new nomination */
-//            NomineeManager().postNominee(nomineeId: fetched.nominees?.nomineeId, reason: $reasoning, process: selectedFeedbackTitle)
+            //            NomineeManager().postNominee(nomineeId: fetched.nominees?.nomineeId, reason: $reasoning, process: selectedFeedbackTitle)
         })
     }
     
@@ -281,5 +273,23 @@ private extension NominationFormView {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             pressed = false
         }
+    }
+    
+    func arrays() {
+    
+        
+        for names in apiViewModel.nominee {
+            
+            option.append("\(names.firstName) \(names.lastName)")
+            
+            print(option)
+            
+            
+//
+//            option.append(name)
+//            
+//            print(option)
+        }
+    
     }
 }

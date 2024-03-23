@@ -12,7 +12,7 @@ struct Nominee: Codable {
     let data: [NomineeData]
 }
 
-struct NomineeData: Codable, Identifiable {
+struct NomineeData: Codable, Identifiable, Equatable {
     let id = UUID()
     let nomineeID: String
     let firstName: String

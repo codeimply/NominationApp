@@ -61,7 +61,7 @@ struct ContentView<ViewModel: NominationViewModelProtocol>: View {
             }
         }
         .onAppear {
-            apiViewModel.getNominee()
+          //  apiViewModel.getNominee()
         }
     }
 }

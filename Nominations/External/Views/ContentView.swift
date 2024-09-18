@@ -17,7 +17,7 @@ struct ContentView<ViewModel: NominationViewModelProtocol>: View {
     
     @State private var pressed = false
     
-    @StateObject var apiViewModel: NomineeManager
+    @StateObject var nomineeManager: NomineeManager
     
     var body: some View {
         
@@ -28,7 +28,7 @@ struct ContentView<ViewModel: NominationViewModelProtocol>: View {
             
             ScrollView(.vertical) {
                 
-                ForEach(apiViewModel.nominee) { nominee in
+                ForEach(nomineeManager.nominees, id: \.nomineeID) { nominee in
                     HStack() {
                         VStack(alignment: .leading) {
                             
@@ -61,7 +61,7 @@ struct ContentView<ViewModel: NominationViewModelProtocol>: View {
             }
         }
         .onAppear {
-          //  apiViewModel.getNominee()
+            nomineeManager.retrieveNominees()
         }
     }
 }

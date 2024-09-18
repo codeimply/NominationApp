@@ -6,26 +6,26 @@
 //  Copyright © 2023 3 Sided Cube (UK) Ltd. All rights reserved.
 //
 
-import Foundation
-
-struct Nominee: Codable {
-    let data: [NomineeData]
-}
-
-struct NomineeData: Codable, Identifiable, Equatable {
-    let id = UUID()
-    let nomineeID: String
-    let firstName: String
-    let lastName: String
-    
-    private enum CodingKeys: String, CodingKey {
-        case nomineeID = "nominee_id"
-        case firstName = "first_name"
-        case lastName = "last_name"
-    }
-}
-
-
+//import Foundation
+//
+//struct Nominee: Codable {
+//    let data: [NomineeData]
+//}
+//
+//struct NomineeData: Codable, Identifiable, Equatable {
+//    let id = UUID()
+//    let nomineeID: String
+//    let firstName: String
+//    let lastName: String
+//    
+//    private enum CodingKeys: String, CodingKey {
+//        case nomineeID = "nominee_id"
+//        case firstName = "first_name"
+//        case lastName = "last_name"
+//    }
+//}
+//
+//
 
 //
 //struct Response: Decodable, Identifiable {

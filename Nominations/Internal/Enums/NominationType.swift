@@ -37,7 +37,7 @@ extension NominationType {
             
         case .home:
             ContentView(viewModel: viewModel(action: action),
-                        screenActionHasOccurred: screenActionHasOccurred, apiViewModel: apiViewModel)
+                        screenActionHasOccurred: screenActionHasOccurred, nomineeManager: apiViewModel)
             
         case .createNomination:
             NominationFormView(viewModel: viewModel(action: action),

@@ -8,12 +8,11 @@
 
 import Foundation
 
-struct Nominees: Codable {
-    let data: [NomineesData]
+struct Nominee: Codable {
+    let data: [Nominees]
 }
 
-struct NomineesData: Codable, Identifiable {
-    let id = UUID()
+struct Nominees: Codable, Hashable {
     let nomineeID: String
     let firstName: String
     let lastName: String

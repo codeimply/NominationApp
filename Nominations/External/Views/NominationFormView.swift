@@ -205,8 +205,6 @@ struct NominationFormView<ViewModel: NominationViewModelProtocol>: View {
         }
         .onAppear {
             apiViewModel.retrieveNominees()
-            
-            arrays()
         }
     }
 }
@@ -274,22 +272,5 @@ private extension NominationFormView {
             pressed = false
         }
     }
-    
-    func arrays() {
-    
-        
-        for names in apiViewModel.nominee {
-            
-            option.append("\(names.firstName) \(names.lastName)")
-            
-            print(option)
-            
-            
-//
-//            option.append(name)
-//            
-//            print(option)
-        }
-    
-    }
 }
+
